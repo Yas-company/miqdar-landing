@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      مقدار - المنصة الرقمية المتكاملة لإدارة عمليات الإعاشة والتموين
+    </title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F59E0B",
+              secondary: "#10B981",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before {
+      content: "\f3c2";
+      }
+      .hero-bg {
+      background-image: url('https://readdy.ai/api/search-image?query=modern%20food%20service%20management%20technology%20concept%2C%20digital%20transformation%20in%20catering%20industry%2C%20professional%20kitchen%20with%20tablets%20and%20digital%20displays%2C%20Arabic%20restaurant%20management%2C%20clean%20modern%20environment%2C%20technology%20integration%2C%20professional%20staff%20using%20digital%20systems&width=1920&height=1080&seq=hero002&orientation=landscape');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      }
+      .fade-in {
+      animation: fadeIn 1s ease-in-out;
+      }
+      .slide-up {
+      animation: slideUp 0.8s ease-out;
+      }
+      .float {
+      animation: float 3s ease-in-out infinite;
+      }
+      @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+      }
+      @keyframes slideUp {
+      from {
+      opacity: 0;
+      transform: translateY(30px);
+      }
+      to {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      }
+      @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      }
+      .hover-scale {
+      transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+      transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <img src="looogo.jpeg" alt="شعار مقدار" class="ml-2" style="max-width: 60px; max-height: 60px; border: none; outline: none;" />
+            <div class="text-2xl font-['Pacifico'] text-primary">مقدار</div>
+          </div>
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="#hero"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >الرئيسية</a
+            >
+            <a
+              href="#features"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >المميزات</a
+            >
+            <a
+              href="#solutions"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >الحلول</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >عن الشركة</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >تواصل معنا</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-yellow-600 transition-colors whitespace-nowrap text-sm lg:text-base"
+            >
+              اطلب عرض تجريبي
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+              <i class="ri-menu-line text-2xl"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden bg-white border-t border-gray-100 py-4"
+        >
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#hero"
+              class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
+              >الرئيسية</a
+            >
+            <a
+              href="#features"
+              class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
+              >المميزات</a
+            >
+            <a
+              href="#solutions"
+              class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
+              >الحلول</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
+              >عن الشركة</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
+              >تواصل معنا</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center relative">
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-transparent via-white/95 to-white"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div
+            class="space-y-6 lg:space-y-8 text-center lg:text-right bg-white/90 lg:bg-transparent p-6 lg:p-0 rounded-xl lg:rounded-none"
+          >
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight fade-in drop-shadow-sm"
+            >
+              مقدار: المنصة الرقمية المتكاملة لإدارة عمليات
+              <span class="text-primary">الإعاشة والتموين</span>
+            </h1>
+            <p
+              class="text-lg lg:text-xl text-gray-700 leading-relaxed slide-up drop-shadow-sm"
+            >
+              ودّع الأنظمة المتعددة والفوضى الإدارية. تحكم في كل شيء من الطلبات
+              والمخزون إلى المشتريات والطواقم عبر منصة واحدة ذكية.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <button
+                class="bg-primary text-white px-6 lg:px-8 py-3 lg:py-4 !rounded-button hover:bg-yellow-600 transition-colors text-base lg:text-lg font-semibold whitespace-nowrap slide-up"
+              >
+                اطلب عرض تجريبي مخصص
+              </button>
+              <button
+                id="features-btn"
+                class="border-2 border-primary text-primary px-6 lg:px-8 py-3 lg:py-4 !rounded-button hover:bg-primary hover:text-white transition-colors text-base lg:text-lg font-semibold whitespace-nowrap"
+              >
+                تعرف على المميزات
+              </button>
+            </div>
+          </div>
+          <div class="mt-8 lg:mt-0">
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20dashboard%20interface%20for%20food%20service%20management%20system%20showing%20miqdar%20logo%20on%20screen%2C%20clean%20UI%20design%20with%20charts%20and%20analytics%2C%20professional%20software%20interface%2C%20Arabic%20text%20elements%2C%20contemporary%20design%2C%20business%20analytics%20dashboard%2C%20no%20people%2C%20technology%20focused&width=600&height=400&seq=dash002&orientation=landscape"
+              alt="لوحة تحكم مقدار"
+              class="w-full h-auto rounded-2xl shadow-2xl object-cover float hover-scale"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Problem & Solution Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            هل تعاني من الهدر المالي، صعوبة المتابعة، وتعدد الأنظمة؟
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            المشاكل التي تواجهها المنشآت الكبيرة في إدارة عمليات الإعاشة
+            والتموين
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-database-2-line text-2xl text-red-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+              فوضى البيانات
+            </h3>
+            <p class="text-gray-600">
+              تشتت المعلومات بين إدارات مختلفة وصعوبة الحصول على رؤية شاملة
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i
+                class="ri-money-dollar-circle-line text-2xl text-orange-600"
+              ></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+              هدر في الموارد
+            </h3>
+            <p class="text-gray-600">
+              صعوبة تتبع المخزون والمكونات الزائدة مما يؤدي إلى خسائر مالية
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-time-line text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+              بطء الموافقات
+            </h3>
+            <p class="text-gray-600">
+              دورات عمل ورقية أو عبر أنظمة منفصلة تؤخر اتخاذ القرارات
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-eye-off-line text-2xl text-purple-600"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">
+              ضعف الرقابة
+            </h3>
+            <p class="text-gray-600">
+              انعدام الرؤية اللحظية على أداء المشاريع والعمليات التشغيلية
+            </p>
+          </div>
+        </div>
+        <div class="bg-primary/5 rounded-2xl p-12 text-center">
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">
+            الحل الشامل مع مقدار
+          </h3>
+          <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            نظام مقدار يوحّد جميع عملياتك في منصة مركزية ذكية، مما يضمن الشفافية
+            الكاملة، تقليل الهدر، وتحسين الكفاءة التشغيلية لمنشأتك.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Features & Benefits Section -->
+    <section id="features" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            لماذا مقدار هو الخيار الأمثل؟
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            منصة شاملة لإدارة الإعاشة والتموين مع إدارة الموارد البشرية والمحاسبة وتنظيم المشاريع
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-dashboard-3-line text-2xl text-primary"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  إدارة مركزية وشاملة 👁️
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  متابعة جميع المشاريع، المخزون، والمشتريات من لوحة تحكم واحدة
+                  موحدة.
+                </p>
+                <p class="text-primary font-semibold">
+                  ✓ تمكين الإدارة العليا من اتخاذ قرارات أسرع وأكثر دقة
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-refresh-line text-2xl text-secondary"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  أتمتة دورات العمل 🔄
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  دورة موافقات رقمية تبدأ من طلب المواد وحتى أمر الشراء.
+                </p>
+                <p class="text-secondary font-semibold">
+                  ✓ تقليل وقت الاعتمادات والتخلص من الأخطاء البشرية
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-restaurant-line text-2xl text-orange-600"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  إدارة دقيقة للمخزون 🍲
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  ربط المكونات بالمخزون وتحديث الكميات تلقائياً عند التحضير.
+                </p>
+                <p class="text-orange-600 font-semibold">
+                  ✓ تقليل الهدر، التحكم في التكاليف، وضمان جودة الوجبات
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-8">
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-team-line text-2xl text-blue-600"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  إدارة الموارد البشرية 👥
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  إدارة الطواقم، توزيع المهام، ومتابعة الأداء مع تتبع ساعات العمل والحضور.
+                </p>
+                <p class="text-blue-600 font-semibold">
+                  ✓ تحسين كفاءة الفريق وإدارة الموارد البشرية بفعالية
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-calculator-line text-2xl text-green-600"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  إدارة المحاسبة المالية 💰
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  تتبع التكاليف، إدارة الميزانيات، وتسجيل جميع المعاملات المالية للمشاريع.
+                </p>
+                <p class="text-green-600 font-semibold">
+                  ✓ شفافية مالية كاملة ومراقبة دقيقة للتكاليف
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-calendar-todo-line text-2xl text-purple-600"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  تنظيم المهام والمشاريع 📋
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  تخطيط وإدارة المشاريع مع جدولة المهام ومتابعة التقدم وإدارة المواعيد النهائية.
+                </p>
+                <p class="text-purple-600 font-semibold">
+                  ✓ تنظيم مثالي للعمليات وضمان إنجاز المشاريع في الوقت المحدد
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-6">
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0"
+              >
+                <i class="ri-bar-chart-box-line text-2xl text-purple-600"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold text-gray-900 mb-3">
+                  تقارير ذكية 📊
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  عرض بيانات الأداء والاستهلاك بشكل رسومي وسهل الفهم.
+                </p>
+                <p class="text-purple-600 font-semibold">
+                  ✓ توفير رؤية شفافة وكاملة حول كفاءة العمليات
+                </p>
+              </div>
+            </div>
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20food%20service%20management%20analytics%20dashboard%20with%20charts%20graphs%20and%20data%20visualization%2C%20modern%20interface%20design%2C%20clean%20layout%2C%20Arabic%20elements%2C%20business%20intelligence&width=500&height=300&seq=analytics001&orientation=landscape"
+              alt="تقارير وتحليلات مقدار"
+              class="w-full rounded-xl shadow-lg object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Target Audience Section -->
+    <section id="solutions" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            مصمم خصيصاً للمنشآت الكبيرة والطموحة
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            حلول متخصصة تلبي احتياجات القطاعات المختلفة في إدارة عمليات الإعاشة
+            والتموين
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20commercial%20catering%20company%20kitchen%20with%20professional%20equipment%2C%20food%20service%20industry%2C%20large%20scale%20food%20preparation%2C%20clean%20professional%20environment&width=400&height=250&seq=catering001&orientation=landscape"
+              alt="شركات التموين"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-restaurant-2-line text-xl text-primary"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                شركات التموين والإعاشة الكبرى
+              </h3>
+              <p class="text-gray-600">
+                إدارة عقود متعددة، تتبع التكاليف، وضمان جودة الخدمة عبر مواقع
+                مختلفة.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20hospital%20kitchen%20and%20food%20service%20area%2C%20medical%20facility%20catering%2C%20healthcare%20food%20preparation%2C%20sterile%20professional%20environment&width=400&height=250&seq=hospital001&orientation=landscape"
+              alt="المستشفيات"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-hospital-line text-xl text-secondary"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                المستشفيات والمراكز الطبية
+              </h3>
+              <p class="text-gray-600">
+                إدارة الوجبات الطبية المتخصصة وضمان التغذية السليمة للمرضى
+                والموظفين.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=luxury%20hotel%20restaurant%20kitchen%20with%20professional%20chefs%2C%20high-end%20hospitality%20food%20service%2C%20elegant%20dining%20preparation%2C%20premium%20catering%20environment&width=400&height=250&seq=hotel001&orientation=landscape"
+              alt="الفنادق"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-hotel-line text-xl text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                الفنادق والمنتجعات
+              </h3>
+              <p class="text-gray-600">
+                تنسيق خدمات متعددة من المطاعم إلى خدمة الغرف وإدارة المناسبات
+                الخاصة.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=industrial%20facility%20cafeteria%20and%20food%20service%20area%2C%20large%20scale%20employee%20dining%2C%20corporate%20catering%2C%20professional%20kitchen%20equipment&width=400&height=250&seq=industrial001&orientation=landscape"
+              alt="القطاعات الصناعية"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-building-line text-xl text-orange-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                القطاعات الصناعية
+              </h3>
+              <p class="text-gray-600">
+                إطعام أعداد كبيرة من الموظفين مع ضمان الجودة والالتزام بالمعايير
+                الصحية.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://readdy.ai/api/search-image?query=large%20event%20catering%20setup%20with%20professional%20food%20service%2C%20conference%20dining%2C%20corporate%20event%20catering%2C%20banquet%20preparation&width=400&height=250&seq=events001&orientation=landscape"
+              alt="تنظيم الفعاليات"
+              class="w-full h-48 object-cover object-top"
+            />
+            <div class="p-6">
+              <div
+                class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+              >
+                <i class="ri-calendar-event-line text-xl text-purple-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                شركات تنظيم الفعاليات الكبرى
+              </h3>
+              <p class="text-gray-600">
+                التخطيط والتنفيذ المثالي للمناسبات الضخمة مع إدارة فعالة
+                للموارد.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Company Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                من نحن؟
+              </h2>
+              <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                مقدار هو أحد المشاريع الرائدة لشركة YAS، شركة متخصصة في تطوير
+                الحلول التقنية المبتكرة. نحن فريق من الخبراء في تكنولوجيا
+                الأعمال وإدارة العمليات.
+              </p>
+              <p class="text-lg text-gray-700 leading-relaxed">
+                تأسست شركة YAS برؤية واضحة لتحويل القطاعات التقليدية رقمياً،
+                ومقدار يمثل خبرتنا العميقة في قطاع الإعاشة والتموين، حيث طورنا
+                هذا الحل ليعالج التحديات الحقيقية التي تواجهها المنشآت الكبيرة.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="bg-primary/5 p-6 rounded-xl">
+                <div
+                  class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4"
+                >
+                  <i class="ri-lightbulb-line text-xl text-primary"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">رؤيتنا</h3>
+                <p class="text-gray-600">
+                  أن نكون الرائدون في تقديم حلول رقمية متطورة لإدارة عمليات
+                  الإعاشة في المنطقة
+                </p>
+              </div>
+              <div class="bg-secondary/5 p-6 rounded-xl">
+                <div
+                  class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mb-4"
+                >
+                  <i class="ri-target-line text-xl text-secondary"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">مهمتنا</h3>
+                <p class="text-gray-600">
+                  تمكين المنشآت من تحقيق أقصى كفاءة في عملياتها وتقليل الهدر إلى
+                  أدنى حد ممكن
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://readdy.ai/api/search-image?query=modern%20technology%20office%20workspace%20with%20computer%20screens%20displaying%20miqdar%20logo%20interface%2C%20professional%20software%20development%20environment%2C%20clean%20contemporary%20office%20design%2C%20digital%20displays%20showing%20food%20service%20management%20system%2C%20no%20people%20visible%2C%20technology%20focused%20workspace%2C%20YAS%20company%20branding%20elements&width=600&height=500&seq=yas003&orientation=portrait"
+              alt="شركة YAS - فريق مقدار"
+              class="w-full h-auto rounded-2xl shadow-xl object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Coming Soon Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <div
+            class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse"
+          >
+            <i class="ri-user-star-line text-4xl text-primary"></i>
+          </div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">شركاؤنا قريباً</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            نحن نعمل مع عدد من الشركات الرائدة لتطبيق حلول مقدار المتقدمة. ستجد
+            هنا قريباً تجارب وآراء عملائنا الحقيقية.
+          </p>
+          <div
+            class="bg-gradient-to-l from-primary/5 to-secondary/5 rounded-2xl p-8 max-w-2xl mx-auto"
+          >
+            <h3 class="text-2xl font-semibold text-gray-900 mb-4">
+              كن من الأوائل
+            </h3>
+            <p class="text-gray-700 mb-6">
+              انضم إلى قائمة الشركات التي ستحصل على تجربة مبكرة لنظام مقدار
+            </p>
+            <button
+              id="early-access-btn"
+              class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-yellow-600 transition-colors font-semibold whitespace-nowrap"
+            >
+              احجز مكانك الآن
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Final CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-l from-primary/10 via-primary/5 to-transparent relative overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            هل أنت مستعد لرفع كفاءة عمليات التموين لديك؟
+          </h2>
+          <p
+            class="text-xl text-gray-700 max-w-4xl mx-auto mb-10 leading-relaxed"
+          >
+            اكتشف كيف يمكن لنظام مقدار أن يقلل من الهدر ويزيد من الرقابة في
+            منشأتك. احجز عرضك التجريبي اليوم واختبر الفرق بنفسك.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
+          >
+            <button
+              class="bg-primary text-white px-10 py-4 !rounded-button hover:bg-yellow-600 transition-colors text-lg font-semibold shadow-lg whitespace-nowrap hover-scale"
+            >
+              اطلب عرض تجريبي مخصص الآن
+            </button>
+            <div class="flex items-center gap-4 text-gray-700">
+              <div
+                class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm"
+              >
+                <i class="ri-mail-line text-xl text-primary"></i>
+              </div>
+              <div class="text-right">
+                <p class="text-sm text-gray-600">راسلنا مباشرة</p>
+                <a
+                  href="mailto:info@miqdar.com"
+                  class="font-semibold hover:text-primary transition-colors"
+                  >info@miqdar.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div class="flex items-center justify-center gap-3 text-gray-700">
+              <div
+                class="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center"
+              >
+                <i class="ri-check-line text-secondary"></i>
+              </div>
+              <span>عرض تجريبي مجاني</span>
+            </div>
+            <div class="flex items-center justify-center gap-3 text-gray-700">
+              <div
+                class="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center"
+              >
+                <i class="ri-check-line text-secondary"></i>
+              </div>
+              <span>دعم فني متكامل</span>
+            </div>
+            <div class="flex items-center justify-center gap-3 text-gray-700">
+              <div
+                class="w-8 h-8 bg-secondary/10 rounded-full flex items-center justify-center"
+              >
+                <i class="ri-check-line text-secondary"></i>
+              </div>
+              <span>تدريب شامل للفريق</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
+          <div class="lg:col-span-2">
+            <div class="flex items-center mb-6">
+              <img src="looogo.jpeg" alt="شعار مقدار" class="ml-3" style="max-width: 80px; max-height: 80px; border: none; outline: none;" />
+              <div class="text-3xl font-['Pacifico'] text-primary">مقدار</div>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+              المنصة الرقمية المتكاملة لإدارة عمليات الإعاشة والتموين. نساعد
+              المنشآت الكبيرة على تحقيق الكفاءة والشفافية في عملياتها.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-line"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">روابط سريعة</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#hero"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >الرئيسية</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >المميزات</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#solutions"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >الحلول</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >المدونة</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">تواصل معنا</h4>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <a
+                  href="mailto:info@miqdar.com"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >info@miqdar.com</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <a
+                  href="tel:+966506564275"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >+966 50 656 4275</a
+                >
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span class="text-gray-300"
+                  >مكة المكرمة، المملكة العربية السعودية</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-400">© 2025 مقدار. جميع الحقوق محفوظة.</p>
+            <div class="flex gap-6">
+              <a
+                href="#privacy"
+                class="text-gray-400 hover:text-primary transition-colors"
+                >سياسة الخصوصية</a
+              >
+              <a
+                href="#terms"
+                class="text-gray-400 hover:text-primary transition-colors"
+                >شروط الاستخدام</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Privacy Policy Modal -->
+    <div
+      id="privacy-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-[70]"
+    >
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div
+          class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        >
+          <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">سياسة الخصوصية</h2>
+              <button
+                id="close-privacy"
+                class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full"
+              >
+                <i class="ri-close-line text-xl"></i>
+              </button>
+            </div>
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  1. جمع المعلومات
+                </h3>
+                <p>
+                  نحن في مقدار نجمع المعلومات التي تقدمها لنا بشكل مباشر عند
+                  استخدام خدماتنا، بما في ذلك:
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>
+                    معلومات الاتصال (الاسم، البريد الإلكتروني، رقم الهاتف)
+                  </li>
+                  <li>معلومات الشركة (اسم الشركة، العنوان، نوع النشاط)</li>
+                  <li>بيانات الاستخدام والتفضيلات</li>
+                </ul>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  2. استخدام المعلومات
+                </h3>
+                <p>نستخدم المعلومات المجمعة للأغراض التالية:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>تقديم وتحسين خدماتنا</li>
+                  <li>التواصل معك بخصوص الخدمات</li>
+                  <li>إرسال التحديثات والإشعارات المهمة</li>
+                  <li>تحليل استخدام المنصة لتطوير الخدمات</li>
+                </ul>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  3. حماية البيانات
+                </h3>
+                <p>
+                  نتخذ جميع الإجراءات الأمنية اللازمة لحماية معلوماتك الشخصية من
+                  الوصول غير المصرح به أو التعديل أو الكشف أو التدمير.
+                </p>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  4. مشاركة المعلومات
+                </h3>
+                <p>
+                  لا نبيع أو نؤجر أو نشارك معلوماتك الشخصية مع أطراف ثالثة دون
+                  موافقتك الصريحة، باستثناء الحالات المطلوبة قانونياً.
+                </p>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  5. حقوقك
+                </h3>
+                <p>لديك الحق في:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>الوصول إلى معلوماتك الشخصية</li>
+                  <li>تصحيح أو تحديث معلوماتك</li>
+                  <li>طلب حذف معلوماتك</li>
+                  <li>الاعتراض على معالجة معلوماتك</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Terms of Service Modal -->
+    <div
+      id="terms-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-[70]"
+    >
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div
+          class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+        >
+          <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold text-gray-900">شروط الاستخدام</h2>
+              <button
+                id="close-terms"
+                class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full"
+              >
+                <i class="ri-close-line text-xl"></i>
+              </button>
+            </div>
+            <div class="space-y-6 text-gray-700 leading-relaxed">
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  1. قبول الشروط
+                </h3>
+                <p>
+                  باستخدام منصة مقدار، فإنك توافق على الالتزام بهذه الشروط
+                  والأحكام. إذا كنت لا توافق على أي من هذه الشروط، يرجى عدم
+                  استخدام خدماتنا.
+                </p>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  2. وصف الخدمة
+                </h3>
+                <p>
+                  مقدار هي منصة رقمية متكاملة لإدارة عمليات الإعاشة والتموين.
+                  نوفر أدوات لإدارة المخزون، المشتريات، الطلبات، والتقارير
+                  للمنشآت الكبيرة.
+                </p>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  3. حساب المستخدم
+                </h3>
+                <p>لاستخدام خدماتنا، قد تحتاج إلى إنشاء حساب. أنت مسؤول عن:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>الحفاظ على سرية معلومات حسابك</li>
+                  <li>جميع الأنشطة التي تحدث تحت حسابك</li>
+                  <li>إخطارنا فوراً بأي استخدام غير مصرح به</li>
+                </ul>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  4. الاستخدام المقبول
+                </h3>
+                <p>يجب عليك استخدام خدماتنا بطريقة قانونية ومسؤولة. يُمنع:</p>
+                <ul class="list-disc list-inside mt-2 space-y-1">
+                  <li>انتهاك أي قوانين أو لوائح</li>
+                  <li>التدخل في أمان المنصة</li>
+                  <li>محاولة الوصول غير المصرح به للبيانات</li>
+                  <li>استخدام المنصة لأي أغراض احتيالية</li>
+                </ul>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  5. الرسوم والدفع
+                </h3>
+                <p>
+                  رسوم الخدمة تُحدد حسب خطة الاشتراك المختارة. جميع الرسوم
+                  مستحقة الدفع مقدماً وغير قابلة للاسترداد ما لم ينص على خلاف
+                  ذلك.
+                </p>
+              </section>
+              <section>
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  6. إنهاء الخدمة
+                </h3>
+                <p>
+                  يحق لنا إنهاء أو تعليق حسابك في أي وقت لانتهاك هذه الشروط أو
+                  لأي سبب آخر وفق تقديرنا المطلق.
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="smooth-scroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+        // Handle features button click with highlight effect
+        const featuresBtn = document.getElementById("features-btn");
+        if (featuresBtn) {
+          featuresBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const featuresSection = document.getElementById("features");
+            if (featuresSection) {
+              // Smooth scroll to features section
+              featuresSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+              // Add highlight effect after scroll
+              setTimeout(() => {
+                // Add temporary highlight class
+                featuresSection.style.transition = "all 0.8s ease";
+                featuresSection.style.boxShadow =
+                  "0 0 0 4px rgba(245, 158, 11, 0.3), 0 0 30px rgba(245, 158, 11, 0.1)";
+                featuresSection.style.backgroundColor = "rgba(245, 158, 11, 0.02)";
+                // Remove highlight after 3 seconds
+                setTimeout(() => {
+                  featuresSection.style.boxShadow = "";
+                  featuresSection.style.backgroundColor = "";
+                }, 3000);
+              }, 800);
+            }
+          });
+        }
+      });
+    </script>
+    <script id="cta-buttons">
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctaButtons = document.querySelectorAll("button");
+        ctaButtons.forEach((button) => {
+          if (button.textContent.includes("اطلب عرض تجريبي")) {
+            button.addEventListener("click", function () {
+              showDemoForm();
+            });
+          } else if (button.textContent.includes("احجز مكانك")) {
+            button.addEventListener("click", function () {
+              showDemoForm();
+            });
+          }
+        });
+      });
+      function showDemoForm() {
+        const formDiv = document.createElement("div");
+        formDiv.className =
+          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[60] fade-in p-4";
+        formDiv.innerHTML = `
+      <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto slide-up">
+      <div class="p-8">
+      <div class="flex justify-between items-center mb-6">
+      <h2 class="text-3xl font-bold text-gray-900">اطلب عرض تجريبي مخصص</h2>
+      <button onclick="this.closest('.fixed').remove()" class="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-full">
+      <i class="ri-close-line text-xl"></i>
+      </button>
+      </div>
+      <p class="text-gray-600 mb-8">املأ النموذج أدناه وسيقوم فريقنا بتجهيز عرض تجريبي مخصص لشركتك خلال 24 ساعة</p>
+      <form id="demo-request-form" class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">الاسم الكامل *</label>
+      <input type="text" name="full_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">المنصب *</label>
+      <input type="text" name="position" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+      </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">اسم الشركة *</label>
+      <input type="text" name="company_name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">نوع القطاع *</label>
+      <select name="industry_type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8">
+      <option value="">اختر القطاع</option>
+      <option value="catering">شركات التموين والإعاشة</option>
+      <option value="healthcare">المستشفيات والمراكز الطبية</option>
+      <option value="hospitality">الفنادق والمنتجعات</option>
+      <option value="industrial">القطاعات الصناعية</option>
+      <option value="events">شركات تنظيم الفعاليات</option>
+      <option value="other">أخرى</option>
+      </select>
+      </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">البريد الإلكتروني *</label>
+      <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">رقم الهاتف</label>
+      <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
+      </div>
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">حجم الشركة *</label>
+      <select name="company_size" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8">
+      <option value="">اختر حجم الشركة</option>
+      <option value="small">أقل من 100 موظف</option>
+      <option value="medium">100 - 500 موظف</option>
+      <option value="large">500 - 1000 موظف</option>
+      <option value="enterprise">أكثر من 1000 موظف</option>
+      </select>
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">عدد الوجبات اليومية التقريبي</label>
+      <select name="daily_meals" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8">
+      <option value="">اختر العدد التقريبي</option>
+      <option value="100">أقل من 100 وجبة</option>
+      <option value="500">100 - 500 وجبة</option>
+      <option value="1000">500 - 1000 وجبة</option>
+      <option value="5000">1000 - 5000 وجبة</option>
+      <option value="10000">أكثر من 5000 وجبة</option>
+      </select>
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">التحديات الحالية في إدارة الإعاشة</label>
+      <textarea name="current_challenges" rows="4" maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none" placeholder="اختياري - اذكر أهم التحديات التي تواجهونها حالياً"></textarea>
+      <div class="text-xs text-gray-500 mt-1">الحد الأقصى 500 حرف</div>
+      </div>
+      <div>
+      <label class="block text-sm font-semibold text-gray-700 mb-2">الوقت المفضل للعرض التجريبي</label>
+      <select name="preferred_time" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm pr-8">
+      <option value="">اختر الوقت المناسب</option>
+      <option value="morning">الصباح (9:00 - 12:00)</option>
+      <option value="afternoon">بعد الظهر (1:00 - 5:00)</option>
+      <option value="evening">المساء (6:00 - 8:00)</option>
+      <option value="flexible">مرن - حسب الحاجة</option>
+      </select>
+      </div>
+      <div class="flex items-start gap-3">
+      <input type="checkbox" name="privacy_agreement" required class="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+      <label class="text-sm text-gray-600">
+      أوافق على <a href="#" onclick="event.preventDefault(); document.getElementById('privacy-modal').classList.remove('hidden');" class="text-primary hover:underline">سياسة الخصوصية</a> وأسمح لفريق مقدار بالتواصل معي لتقديم العرض التجريبي *
+      </label>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+      <button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-yellow-600 transition-colors font-semibold whitespace-nowrap flex-1">
+      إرسال طلب العرض التجريبي
+      </button>
+      <button type="button" onclick="this.closest('.fixed').remove()" class="border-2 border-gray-300 text-gray-700 px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors font-semibold whitespace-nowrap">
+      إلغاء
+      </button>
+      </div>
+      </form>
+      </div>
+      </div>
+      `;
+        document.body.appendChild(formDiv);
+        // Handle form submission
+        const form = document.getElementById("demo-request-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Basic validation
+          const requiredFields = form.querySelectorAll("[required]");
+          let isValid = true;
+          requiredFields.forEach((field) => {
+            if (!field.value.trim()) {
+              field.classList.add("border-red-500");
+              isValid = false;
+            } else {
+              field.classList.remove("border-red-500");
+            }
+          });
+          if (!isValid) {
+            showSuccessMessage(
+              "خطأ في النموذج",
+              "يرجى ملء جميع الحقول المطلوبة",
+              "error",
+            );
+            return;
+          }
+          // Simulate form submission
+          const submitButton = form.querySelector('button[type="submit"]');
+          submitButton.disabled = true;
+          submitButton.innerHTML =
+            '<i class="ri-loader-4-line animate-spin mr-2"></i>جاري الإرسال...';
+          setTimeout(() => {
+            formDiv.remove();
+            showSuccessMessage(
+              "تم إرسال طلبك بنجاح!",
+              "شكراً لك. سيتواصل معك فريقنا خلال 24 ساعة لتحديد موعد العرض التجريبي وجمع متطلبات شركتك.",
+            );
+          }, 2000);
+        });
+      }
+      function showSuccessMessage(title, message, type = "success") {
+        const alertDiv = document.createElement("div");
+        alertDiv.className =
+          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 fade-in";
+        const iconClass =
+          type === "error"
+            ? "ri-error-warning-line text-red-600"
+            : "ri-check-line text-secondary";
+        const bgClass = type === "error" ? "bg-red-50" : "bg-secondary/10";
+        alertDiv.innerHTML = `
+      <div class="bg-white rounded-xl p-8 max-w-md mx-4 slide-up">
+      <div class="text-center">
+      <div class="w-16 h-16 ${bgClass} rounded-full flex items-center justify-center mx-auto mb-4">
+      <i class="${iconClass} text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">${title}</h3>
+      <p class="text-gray-600 mb-6">${message}</p>
+      <button onclick="this.closest('.fixed').remove()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-yellow-600 transition-colors">
+      حسناً
+      </button>
+      </div>
+      </div>
+      `;
+        document.body.appendChild(alertDiv);
+      }
+    </script>
+    <script id="mobile-menu">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+            const icon = mobileMenuBtn.querySelector("i");
+            if (mobileMenu.classList.contains("hidden")) {
+              icon.className = "ri-menu-line text-2xl";
+            } else {
+              icon.className = "ri-close-line text-2xl";
+            }
+          });
+          const mobileLinks = mobileMenu.querySelectorAll("a");
+          mobileLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              mobileMenu.classList.add("hidden");
+              mobileMenuBtn.querySelector("i").className = "ri-menu-line text-2xl";
+            });
+          });
+        }
+      });
+    </script>
+    <script id="email-and-modals">
+      document.addEventListener("DOMContentLoaded", function () {
+        const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+        emailLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const email = this.getAttribute("href").replace("mailto:", "");
+            if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+              window.location.href = this.getAttribute("href");
+            } else if (navigator.userAgent.match(/Android/i)) {
+              window.location.href = this.getAttribute("href");
+            } else {
+              showEmailOptions(email);
+            }
+          });
+        });
+        function showEmailOptions(email) {
+          const emailDiv = document.createElement("div");
+          emailDiv.className =
+            "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 fade-in p-4";
+          emailDiv.innerHTML = `
+      <div class="bg-white rounded-xl p-8 max-w-md w-full slide-up">
+      <div class="text-center">
+      <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+      <i class="ri-mail-line text-2xl text-primary"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-900 mb-4">تواصل معنا</h3>
+      <p class="text-gray-600 mb-6">يمكنك نسخ الإيميل أو فتح برنامج البريد الإلكتروني</p>
+      <div class="bg-gray-50 p-3 rounded-lg mb-6">
+      <p class="text-gray-800 font-medium" id="email-to-copy">${email}</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-3">
+      <button onclick="copyEmail('${email}')" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-yellow-600 transition-colors flex-1">
+      <i class="ri-file-copy-line ml-2"></i>نسخ الإيميل
+      </button>
+      <button onclick="window.location.href='mailto:${email}'; this.closest('.fixed').remove();" class="border-2 border-primary text-primary px-6 py-3 !rounded-button hover:bg-primary hover:text-white transition-colors flex-1">
+      فتح البريد
+      </button>
+      </div>
+      <button onclick="this.closest('.fixed').remove()" class="mt-4 text-gray-500 hover:text-gray-700 transition-colors">إغلاق</button>
+      </div>
+      </div>
+      `;
+          document.body.appendChild(emailDiv);
+        }
+        window.copyEmail = function (email) {
+          navigator.clipboard.writeText(email).then(function () {
+            const button = event.target.closest("button");
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="ri-check-line ml-2"></i>تم النسخ!';
+            button.className = button.className.replace("bg-primary", "bg-secondary");
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.className = button.className.replace(
+                "bg-secondary",
+                "bg-primary",
+              );
+            }, 2000);
+          });
+        };
+        const privacyLink = document.querySelector('a[href="#privacy"]');
+        const termsLink = document.querySelector('a[href="#terms"]');
+        const privacyModal = document.getElementById("privacy-modal");
+        const termsModal = document.getElementById("terms-modal");
+        const closePrivacy = document.getElementById("close-privacy");
+        const closeTerms = document.getElementById("close-terms");
+        if (privacyLink && privacyModal) {
+          privacyLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            privacyModal.classList.remove("hidden");
+          });
+        }
+        if (termsLink && termsModal) {
+          termsLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            termsModal.classList.remove("hidden");
+          });
+        }
+        if (closePrivacy && privacyModal) {
+          closePrivacy.addEventListener("click", function () {
+            privacyModal.classList.add("hidden");
+          });
+          privacyModal.addEventListener("click", function (e) {
+            if (e.target === privacyModal) {
+              privacyModal.classList.add("hidden");
+            }
+          });
+        }
+        if (closeTerms && termsModal) {
+          closeTerms.addEventListener("click", function () {
+            termsModal.classList.add("hidden");
+          });
+          termsModal.addEventListener("click", function (e) {
+            if (e.target === termsModal) {
+              termsModal.classList.add("hidden");
+            }
+          });
+        }
+      });
+    </script>
+    <script id="animations">
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+        const animatedElements = document.querySelectorAll(
+          ".grid > div, .space-y-8 > div",
+        );
+        animatedElements.forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>
