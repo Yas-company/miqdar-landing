@@ -122,7 +122,27 @@
               >تواصل معنا</a
             >
           </div>
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3">
+            <div class="hidden xl:flex items-center gap-2">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.miqdar.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-gray-200 text-gray-700 px-3 py-2 rounded-full hover:border-primary hover:text-primary transition-colors whitespace-nowrap text-sm flex items-center gap-2"
+              >
+                <i class="ri-google-play-line text-base"></i>
+                <span>Android</span>
+              </a>
+              <a
+                href="https://apps.apple.com/us/app/miqdar/id6758660122"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-gray-200 text-gray-700 px-3 py-2 rounded-full hover:border-primary hover:text-primary transition-colors whitespace-nowrap text-sm flex items-center gap-2"
+              >
+                <i class="ri-apple-fill text-base"></i>
+                <span>iPhone</span>
+              </a>
+            </div>
             <button
               class="bg-primary text-white px-4 lg:px-6 py-2 !rounded-button hover:bg-yellow-600 transition-colors whitespace-nowrap text-sm lg:text-base"
             >
@@ -164,6 +184,29 @@
               class="text-gray-700 hover:text-primary transition-colors px-4 py-2"
               >تواصل معنا</a
             >
+            <div class="px-4 pt-2 border-t border-gray-100">
+              <p class="text-xs text-gray-500 mb-3">روابط التطبيق</p>
+              <div class="flex flex-col gap-3">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.miqdar.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-700 hover:text-primary transition-colors py-2 flex items-center gap-2"
+                >
+                  <i class="ri-google-play-line text-base"></i>
+                  <span>تحميل التطبيق على Android</span>
+                </a>
+                <a
+                  href="https://apps.apple.com/us/app/miqdar/id6758660122"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-700 hover:text-primary transition-colors py-2 flex items-center gap-2"
+                >
+                  <i class="ri-apple-fill text-base"></i>
+                  <span>تحميل التطبيق على iPhone</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -749,16 +792,50 @@
     <!-- Footer -->
     <footer id="contact" class="bg-gray-900 text-white py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
-          <div class="lg:col-span-2">
-            <div class="flex items-center mb-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-start">
+          <div class="lg:col-span-5">
+            <div class="flex items-center justify-start mb-6">
               <img src="looogo.jpeg" alt="شعار مقدار" class="ml-3" style="max-width: 80px; max-height: 80px; border: none; outline: none;" />
               <div class="text-3xl font-['Pacifico'] text-primary">مقدار</div>
             </div>
-            <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+            <p class="text-gray-300 mb-6 leading-relaxed max-w-xl">
               المنصة الرقمية المتكاملة لإدارة عمليات الإعاشة والتموين. نساعد
               المنشآت الكبيرة على تحقيق الكفاءة والشفافية في عملياتها.
             </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mb-6">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.miqdar.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-gray-800/60 hover:bg-gray-800 text-gray-200 transition-colors rounded-2xl px-4 py-4 flex items-center justify-between gap-3"
+              >
+                <div>
+                  <div class="text-sm font-semibold text-white group-hover:text-primary transition-colors">
+                    تحميل التطبيق
+                  </div>
+                  <div class="text-xs text-gray-400 mt-1">Android عبر Google Play</div>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <i class="ri-google-play-line text-primary text-lg"></i>
+                </div>
+              </a>
+              <a
+                href="https://apps.apple.com/us/app/miqdar/id6758660122"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group bg-gray-800/60 hover:bg-gray-800 text-gray-200 transition-colors rounded-2xl px-4 py-4 flex items-center justify-between gap-3"
+              >
+                <div>
+                  <div class="text-sm font-semibold text-white group-hover:text-primary transition-colors">
+                    تحميل التطبيق
+                  </div>
+                  <div class="text-xs text-gray-400 mt-1">iPhone عبر App Store</div>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <i class="ri-apple-fill text-primary text-lg"></i>
+                </div>
+              </a>
+            </div>
             <div class="flex gap-4">
               <a
                 href="#"
@@ -780,44 +857,44 @@
               </a>
             </div>
           </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-6">روابط سريعة</h4>
+          <div class="lg:col-span-3">
+            <h4 class="text-lg font-semibold mb-6 text-white">روابط سريعة</h4>
             <ul class="space-y-3">
               <li>
                 <a
                   href="#hero"
-                  class="text-gray-300 hover:text-primary transition-colors"
+                  class="text-gray-300 hover:text-primary transition-colors inline-flex items-center gap-2"
                   >الرئيسية</a
                 >
               </li>
               <li>
                 <a
                   href="#features"
-                  class="text-gray-300 hover:text-primary transition-colors"
+                  class="text-gray-300 hover:text-primary transition-colors inline-flex items-center gap-2"
                   >المميزات</a
                 >
               </li>
               <li>
                 <a
                   href="#solutions"
-                  class="text-gray-300 hover:text-primary transition-colors"
+                  class="text-gray-300 hover:text-primary transition-colors inline-flex items-center gap-2"
                   >الحلول</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="text-gray-300 hover:text-primary transition-colors"
+                  class="text-gray-300 hover:text-primary transition-colors inline-flex items-center gap-2"
                   >المدونة</a
                 >
               </li>
             </ul>
           </div>
-          <div>
-            <h4 class="text-lg font-semibold mb-6">تواصل معنا</h4>
+          <div class="lg:col-span-4">
+            <h4 class="text-lg font-semibold mb-6 text-white">تواصل معنا</h4>
             <div class="space-y-4">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center">
+              <div class="flex items-center justify-between gap-3 rounded-2xl bg-gray-800/40 px-4 py-3">
+                <div class="w-8 h-8 flex items-center justify-center shrink-0">
                   <i class="ri-mail-line text-primary"></i>
                 </div>
                 <a
@@ -826,8 +903,8 @@
                   >info@miqdar.com</a
                 >
               </div>
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center">
+              <div class="flex items-center justify-between gap-3 rounded-2xl bg-gray-800/40 px-4 py-3">
+                <div class="w-8 h-8 flex items-center justify-center shrink-0">
                   <i class="ri-phone-line text-primary"></i>
                 </div>
                 <a
@@ -836,8 +913,8 @@
                   >+966 50 656 4275</a
                 >
               </div>
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 flex items-center justify-center">
+              <div class="flex items-start justify-between gap-3 rounded-2xl bg-gray-800/40 px-4 py-3">
+                <div class="w-8 h-8 flex items-center justify-center shrink-0">
                   <i class="ri-map-pin-line text-primary"></i>
                 </div>
                 <span class="text-gray-300"
@@ -845,6 +922,32 @@
                 >
               </div>
             </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 mb-8">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5">
+            <div>
+              <h4 class="text-xl font-semibold text-white">روابط مهمة</h4>
+              <p class="text-sm text-gray-400 mt-2">
+                وصول سريع إلى موقع الشركة والمنتج وروابط تحميل التطبيق.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <a
+              href="https://www.yastech.com.sa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-gray-800/60 hover:bg-gray-800 text-gray-200 transition-colors rounded-2xl px-5 py-5 flex items-start justify-between gap-4 min-h-[108px]"
+            >
+              <div>
+                <div class="text-base font-semibold text-white group-hover:text-primary transition-colors">الموقع الرسمي للشركة</div>
+                <div class="text-sm text-gray-400 mt-2">شركة YAS</div>
+              </div>
+              <div class="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <i class="ri-global-line text-primary text-xl"></i>
+              </div>
+            </a>
           </div>
         </div>
         <div class="border-t border-gray-800 pt-8">
