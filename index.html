@@ -7,7 +7,7 @@
       name="description"
       content="مقدار منصة SaaS متكاملة لإدارة المحاسبة والمشتريات والموارد البشرية والمستودعات والمشاريع والجودة والتقارير من مكان واحد."
     />
-    <meta name="theme-color" content="#0b376d" />
+    <meta name="theme-color" content="#073665" />
     <title>مقدار | منصة متكاملة لإدارة أعمالك</title>
     <link rel="icon" type="image/png" href="miqdar-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,20 +22,24 @@
     />
     <style>
       :root {
-        --navy: #0b376d;
-        --navy-deep: #07294f;
-        --navy-soft: #edf3fa;
-        --gold: #e8aa25;
-        --gold-soft: #fff7e4;
-        --green: #167657;
-        --green-soft: #eaf6f1;
-        --ink: #132033;
-        --muted: #5f6b7b;
-        --line: #dce3eb;
+        --navy-950: #041e39;
+        --navy-900: #073665;
+        --navy-800: #0a477f;
+        --navy-100: #e9f1f8;
+        --navy-50: #f4f8fb;
+        --gold: #e9a923;
+        --gold-dark: #a56d00;
+        --gold-soft: #fff4da;
+        --green: #117755;
+        --green-soft: #e4f5ee;
+        --ink: #102033;
+        --muted: #5b6877;
+        --line: #dce4ec;
         --surface: #ffffff;
-        --surface-soft: #f5f7fa;
-        --shadow: 0 18px 50px rgba(11, 55, 109, 0.1);
+        --surface-soft: #f6f8fa;
         --container: 1180px;
+        --shadow-sm: 0 12px 30px rgba(4, 30, 57, 0.08);
+        --shadow-lg: 0 30px 70px rgba(4, 30, 57, 0.15);
       }
 
       * {
@@ -44,7 +48,7 @@
 
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 88px;
+        scroll-padding-top: 90px;
       }
 
       body {
@@ -71,50 +75,13 @@
         text-decoration: none;
       }
 
-      button,
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
-
       button {
         font: inherit;
       }
 
-      .container {
-        width: min(var(--container), calc(100% - 40px));
-        margin-inline: auto;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin: 0 0 14px;
-        color: var(--green);
-        font-size: 0.92rem;
-        font-weight: 700;
-      }
-
-      .eyebrow::before {
-        width: 24px;
-        height: 3px;
-        border-radius: 3px;
-        background: var(--gold);
-        content: "";
-      }
-
-      .section-heading {
-        max-width: 760px;
-        margin-bottom: 44px;
-      }
-
-      .section-heading.center {
-        margin-inline: auto;
-        text-align: center;
-      }
-
-      .section-heading.center .eyebrow::before {
-        display: none;
+      a,
+      button {
+        -webkit-tap-highlight-color: transparent;
       }
 
       h1,
@@ -127,25 +94,76 @@
       h1,
       h2,
       h3 {
-        color: var(--navy-deep);
+        color: var(--navy-950);
         line-height: 1.35;
       }
 
       h1 {
         margin-bottom: 22px;
-        font-size: clamp(2.45rem, 5vw, 4.8rem);
+        font-size: clamp(2.5rem, 4.6vw, 4.25rem);
         font-weight: 700;
       }
 
       h2 {
         margin-bottom: 16px;
-        font-size: clamp(2rem, 3.8vw, 3.25rem);
+        font-size: clamp(2rem, 3.5vw, 3.15rem);
         font-weight: 700;
       }
 
       h3 {
         margin-bottom: 10px;
-        font-size: 1.25rem;
+        font-size: 1.24rem;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin-inline: auto;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: -80px;
+        right: 16px;
+        z-index: 999;
+        padding: 10px 16px;
+        color: #fff;
+        background: var(--navy-900);
+      }
+
+      .skip-link:focus {
+        top: 12px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0 0 14px;
+        color: var(--green);
+        font-size: 0.92rem;
+        font-weight: 700;
+      }
+
+      .eyebrow::before {
+        width: 26px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--gold);
+        content: "";
+      }
+
+      .section-heading {
+        max-width: 760px;
+        margin-bottom: 42px;
+      }
+
+      .section-heading.center {
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .section-heading.center .eyebrow::before {
+        display: none;
       }
 
       .section-heading > p:last-child {
@@ -155,19 +173,22 @@
       }
 
       .button {
-        min-height: 48px;
+        min-height: 50px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 9px;
-        padding: 11px 20px;
+        padding: 12px 21px;
         border: 1px solid transparent;
         border-radius: 7px;
         cursor: pointer;
         font-weight: 700;
-        line-height: 1.3;
-        transition: background-color 180ms ease, border-color 180ms ease,
-          color 180ms ease, transform 180ms ease;
+        line-height: 1.25;
+        transition:
+          transform 180ms ease,
+          background-color 180ms ease,
+          border-color 180ms ease,
+          color 180ms ease;
       }
 
       .button:hover {
@@ -176,57 +197,50 @@
 
       .button-primary {
         color: #fff;
-        background: var(--navy);
+        background: var(--navy-900);
+        box-shadow: 0 10px 24px rgba(7, 54, 101, 0.2);
       }
 
       .button-primary:hover {
-        background: var(--navy-deep);
+        background: var(--navy-950);
       }
 
-      .button-secondary {
-        color: var(--navy);
-        border-color: var(--navy);
-        background: rgba(255, 255, 255, 0.86);
-      }
-
-      .button-secondary:hover {
-        background: var(--navy-soft);
-      }
-
-      .button-light {
-        color: var(--navy);
+      .button-outline {
+        color: var(--navy-900);
+        border-color: #b9c9d9;
         background: #fff;
       }
 
-      .skip-link {
-        position: fixed;
-        top: -80px;
-        right: 16px;
-        z-index: 1000;
-        padding: 10px 16px;
-        color: #fff;
-        background: var(--navy);
+      .button-outline:hover {
+        border-color: var(--navy-900);
+        background: var(--navy-50);
       }
 
-      .skip-link:focus {
-        top: 12px;
+      .button-light {
+        color: var(--navy-900);
+        background: #fff;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(233, 169, 35, 0.65);
+        outline-offset: 3px;
       }
 
       .site-header {
         position: sticky;
         top: 0;
         z-index: 100;
-        border-bottom: 1px solid rgba(220, 227, 235, 0.82);
+        border-bottom: 1px solid rgba(220, 228, 236, 0.86);
         background: rgba(255, 255, 255, 0.94);
-        backdrop-filter: blur(14px);
+        backdrop-filter: blur(16px);
       }
 
       .nav-wrap {
-        min-height: 76px;
+        min-height: 78px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 24px;
+        gap: 28px;
       }
 
       .brand {
@@ -245,19 +259,35 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 26px;
         font-size: 0.96rem;
         font-weight: 600;
       }
 
       .nav-links a:not(.button) {
+        position: relative;
         padding-block: 8px;
         color: #334155;
-        transition: color 160ms ease;
+      }
+
+      .nav-links a:not(.button)::after {
+        position: absolute;
+        right: 0;
+        bottom: 2px;
+        width: 0;
+        height: 2px;
+        border-radius: 2px;
+        background: var(--gold);
+        content: "";
+        transition: width 180ms ease;
       }
 
       .nav-links a:not(.button):hover {
-        color: var(--navy);
+        color: var(--navy-900);
+      }
+
+      .nav-links a:not(.button):hover::after {
+        width: 100%;
       }
 
       .nav-links .button {
@@ -270,6 +300,11 @@
         gap: 10px;
       }
 
+      .login-link {
+        color: var(--navy-900);
+        font-weight: 700;
+      }
+
       .menu-toggle {
         width: 44px;
         height: 44px;
@@ -278,66 +313,60 @@
         justify-content: center;
         border: 1px solid var(--line);
         border-radius: 7px;
-        color: var(--navy);
+        color: var(--navy-900);
         background: #fff;
         cursor: pointer;
         font-size: 1.45rem;
       }
 
       .hero {
-        min-height: calc(100svh - 76px);
-        display: flex;
-        align-items: center;
         position: relative;
         isolation: isolate;
         overflow: hidden;
-        border-bottom: 1px solid var(--line);
-        background-color: #fff;
-        background-image: linear-gradient(
-            90deg,
-            rgba(255, 255, 255, 0) 14%,
-            rgba(255, 255, 255, 0.96) 56%,
-            #fff 73%
-          ),
-          url("miqdar-platform.png");
-        background-position: left center;
-        background-repeat: no-repeat;
-        background-size: auto 88%, auto 88%;
+        padding-block: 92px 82px;
+        background: linear-gradient(180deg, #fff 0%, #fbfdff 100%);
       }
 
       .hero::before {
         position: absolute;
         inset: 0;
-        z-index: -1;
-        background-image: linear-gradient(
-            rgba(11, 55, 109, 0.045) 1px,
-            transparent 1px
-          ),
-          linear-gradient(
-            90deg,
-            rgba(11, 55, 109, 0.045) 1px,
-            transparent 1px
-          );
-        background-size: 52px 52px;
-        mask-image: linear-gradient(to left, #000, transparent 64%);
+        z-index: -2;
+        background-image:
+          linear-gradient(rgba(7, 54, 101, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(7, 54, 101, 0.035) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: linear-gradient(to bottom, #000 0%, transparent 85%);
         content: "";
       }
 
-      .hero-content {
-        width: min(610px, 55%);
-        padding-block: 74px 92px;
+      .hero::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 42%;
+        height: 100%;
+        background: linear-gradient(140deg, rgba(233, 169, 35, 0.11), transparent 62%);
+        clip-path: polygon(0 0, 100% 0, 100% 78%);
+        content: "";
       }
 
-      .hero .eyebrow {
-        margin-bottom: 18px;
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 0.98fr 1.02fr;
+        gap: clamp(48px, 6vw, 86px);
+        align-items: center;
       }
 
       .hero-copy {
-        max-width: 590px;
-        margin-bottom: 30px;
-        color: #455468;
-        font-size: clamp(1.08rem, 1.7vw, 1.28rem);
-        line-height: 1.9;
+        max-width: 620px;
+      }
+
+      .hero-copy > p:not(.eyebrow) {
+        margin-bottom: 28px;
+        color: #4c5b6d;
+        font-size: clamp(1.06rem, 1.6vw, 1.24rem);
+        line-height: 1.95;
       }
 
       .hero-actions {
@@ -346,232 +375,759 @@
         gap: 12px;
       }
 
-      .hero-proof {
-        margin-top: 34px;
+      .hero-points {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px 24px;
-        color: #40506a;
+        gap: 10px 22px;
+        margin-top: 28px;
+        color: #405168;
         font-size: 0.94rem;
         font-weight: 600;
       }
 
-      .hero-proof span {
+      .hero-points span {
         display: inline-flex;
         align-items: center;
         gap: 7px;
       }
 
-      .hero-proof i {
+      .hero-points i {
         color: var(--green);
       }
 
-      section {
-        padding-block: 96px;
-      }
-
-      .intro {
+      .product-stage {
         position: relative;
-        background: var(--navy-deep);
+        min-height: 580px;
       }
 
-      .intro-grid {
-        display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 70px;
-        align-items: center;
+      .product-frame {
+        position: absolute;
+        inset: 24px 0 20px 38px;
+        overflow: hidden;
+        border: 1px solid #cbd7e3;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: var(--shadow-lg);
       }
 
-      .intro h2,
-      .intro p {
-        color: #fff;
+      .product-frame::before {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        border: 6px solid rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        pointer-events: none;
+        content: "";
       }
 
-      .intro .eyebrow {
-        color: #ffd879;
+      .product-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
-      .intro-copy {
-        margin-bottom: 0;
-        color: #cdd9e8 !important;
-        font-size: 1.12rem;
-      }
-
-      .intro-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(255, 255, 255, 0.12);
-      }
-
-      .intro-list span {
-        min-height: 82px;
+      .floating-label {
+        position: absolute;
+        z-index: 2;
         display: flex;
         align-items: center;
-        gap: 12px;
-        padding: 18px;
-        color: #fff;
-        background: var(--navy-deep);
-        font-weight: 600;
+        gap: 10px;
+        padding: 10px 13px;
+        border: 1px solid rgba(203, 215, 227, 0.92);
+        border-radius: 7px;
+        color: var(--navy-950);
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: var(--shadow-sm);
+        font-size: 0.88rem;
+        font-weight: 700;
+        backdrop-filter: blur(10px);
       }
 
-      .intro-list i {
-        width: 34px;
-        height: 34px;
+      .floating-label i {
+        width: 31px;
+        height: 31px;
         display: grid;
-        flex: 0 0 34px;
         place-items: center;
+        border-radius: 6px;
+        color: var(--navy-900);
+        background: var(--navy-100);
+        font-size: 1rem;
+      }
+
+      .label-top {
+        top: 0;
+        left: 0;
+      }
+
+      .label-side {
+        top: 44%;
+        right: -24px;
+      }
+
+      .label-bottom {
+        right: 48px;
+        bottom: 0;
+      }
+
+      .trust-strip {
+        border-block: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .trust-wrap {
+        min-height: 120px;
+        display: grid;
+        grid-template-columns: 1.15fr repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+      }
+
+      .trust-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 28px;
+      }
+
+      .trust-intro strong {
+        display: block;
+        color: var(--navy-950);
+        font-size: 1.05rem;
+      }
+
+      .trust-intro span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .trust-link {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 16px 10px;
+        border-right: 1px solid var(--line);
+        color: var(--navy-900);
+        text-align: center;
+        transition: background-color 160ms ease;
+      }
+
+      .trust-link:hover {
+        background: var(--navy-50);
+      }
+
+      .trust-link i {
+        font-size: 1.5rem;
+      }
+
+      .trust-link img {
+        width: 68px;
+        height: 45px;
+        object-fit: contain;
+      }
+
+      .trust-link strong {
+        font-size: 0.86rem;
+      }
+
+      .trust-link small {
+        color: var(--muted);
+        font-size: 0.75rem;
+      }
+
+      .trust-mark {
+        color: var(--green);
+        font-weight: 700;
+      }
+
+      section:not(.hero) {
+        padding-block: 100px;
+      }
+
+      .connected {
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        background: var(--navy-950);
+      }
+
+      .connected::after {
+        position: absolute;
+        top: -140px;
+        left: -120px;
+        width: 420px;
+        height: 420px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 50%;
-        color: var(--navy-deep);
+        box-shadow:
+          0 0 0 80px rgba(255, 255, 255, 0.025),
+          0 0 0 160px rgba(255, 255, 255, 0.018);
+        content: "";
+      }
+
+      .connected-grid {
+        display: grid;
+        grid-template-columns: 0.84fr 1.16fr;
+        gap: 76px;
+        align-items: center;
+      }
+
+      .connected .eyebrow {
+        color: #ffd36f;
+      }
+
+      .connected h2 {
+        color: #fff;
+      }
+
+      .connected-copy > p:last-of-type {
+        margin-bottom: 28px;
+        color: #cbd9e7;
+        font-size: 1.08rem;
+      }
+
+      .connection-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .connection-list span {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #e8eff6;
+      }
+
+      .connection-list i {
+        color: var(--gold);
+      }
+
+      .platform-map {
+        position: relative;
+        min-height: 430px;
+      }
+
+      .map-core {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        width: 150px;
+        height: 150px;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        background: #fff;
+        box-shadow:
+          0 0 0 24px rgba(255, 255, 255, 0.045),
+          0 20px 50px rgba(0, 0, 0, 0.2);
+        transform: translate(-50%, -50%);
+      }
+
+      .map-core img {
+        width: 92px;
+        height: 92px;
+        object-fit: contain;
+      }
+
+      .map-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 360px;
+        height: 360px;
+        border: 1px dashed rgba(255, 255, 255, 0.22);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .map-node {
+        position: absolute;
+        z-index: 3;
+        min-width: 134px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 12px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 7px;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 0.88rem;
+        font-weight: 600;
+        backdrop-filter: blur(8px);
+      }
+
+      .map-node i {
+        width: 32px;
+        height: 32px;
+        display: grid;
+        flex: 0 0 32px;
+        place-items: center;
+        border-radius: 6px;
+        color: var(--navy-950);
         background: var(--gold);
+      }
+
+      .node-1 {
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .node-2 {
+        top: 88px;
+        right: 0;
+      }
+
+      .node-3 {
+        right: 18px;
+        bottom: 58px;
+      }
+
+      .node-4 {
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .node-5 {
+        bottom: 58px;
+        left: 18px;
+      }
+
+      .node-6 {
+        top: 88px;
+        left: 0;
       }
 
       .systems {
         background: var(--surface-soft);
       }
 
-      .systems-grid {
+      .systems-layout {
         display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      .system-card {
-        min-height: 238px;
-        padding: 24px;
-        border: 1px solid var(--line);
-        border-top: 4px solid var(--navy);
-        border-radius: 8px;
-        background: #fff;
-        transition: transform 180ms ease, box-shadow 180ms ease,
-          border-color 180ms ease;
-      }
-
-      .system-card:nth-child(3n + 2) {
-        border-top-color: var(--gold);
-      }
-
-      .system-card:nth-child(3n) {
-        border-top-color: var(--green);
-      }
-
-      .system-card:hover {
-        transform: translateY(-4px);
-        border-color: #c5d0dd;
-        box-shadow: var(--shadow);
-      }
-
-      .system-icon {
-        width: 46px;
-        height: 46px;
-        display: grid;
-        place-items: center;
-        margin-bottom: 18px;
-        border-radius: 7px;
-        color: var(--navy);
-        background: var(--navy-soft);
-        font-size: 1.45rem;
-      }
-
-      .system-card:nth-child(3n + 2) .system-icon {
-        color: #8a5b00;
-        background: var(--gold-soft);
-      }
-
-      .system-card:nth-child(3n) .system-icon {
-        color: var(--green);
-        background: var(--green-soft);
-      }
-
-      .system-card p {
-        margin-bottom: 0;
-        color: var(--muted);
-        font-size: 0.96rem;
-      }
-
-      .scale-section {
-        padding-block: 0;
-        background: #fff;
-      }
-
-      .scale-band {
-        min-height: 430px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.68fr 1.32fr;
+        gap: 22px;
         align-items: stretch;
       }
 
-      .scale-content {
+      .system-tabs {
+        display: grid;
+        gap: 8px;
+      }
+
+      .system-tab {
+        width: 100%;
+        min-height: 66px;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 11px 14px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        color: #344358;
+        text-align: right;
+        background: #fff;
+        cursor: pointer;
+        transition:
+          border-color 160ms ease,
+          color 160ms ease,
+          background-color 160ms ease,
+          transform 160ms ease;
+      }
+
+      .system-tab:hover {
+        border-color: #b7c7d7;
+        transform: translateX(-3px);
+      }
+
+      .system-tab[aria-selected="true"] {
+        color: #fff;
+        border-color: var(--navy-900);
+        background: var(--navy-900);
+        box-shadow: 0 12px 28px rgba(7, 54, 101, 0.18);
+      }
+
+      .system-tab i {
+        width: 36px;
+        height: 36px;
+        display: grid;
+        flex: 0 0 36px;
+        place-items: center;
+        border-radius: 6px;
+        color: var(--navy-900);
+        background: var(--navy-100);
+        font-size: 1.1rem;
+      }
+
+      .system-tab[aria-selected="true"] i {
+        color: var(--navy-950);
+        background: var(--gold);
+      }
+
+      .system-tab span {
+        display: grid;
+        line-height: 1.35;
+      }
+
+      .system-tab strong {
+        font-size: 0.96rem;
+      }
+
+      .system-tab small {
+        color: #7a8796;
+        font-size: 0.74rem;
+      }
+
+      .system-tab[aria-selected="true"] small {
+        color: #cfdae5;
+      }
+
+      .system-panel {
+        min-height: 580px;
+        display: grid;
+        grid-template-columns: 0.94fr 1.06fr;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .panel-copy {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 72px max(28px, calc((100vw - var(--container)) / 2));
-        padding-left: clamp(34px, 5vw, 84px);
+        padding: 44px;
+      }
+
+      .panel-kicker {
+        margin-bottom: 10px;
+        color: var(--green);
+        font-size: 0.86rem;
+        font-weight: 700;
+      }
+
+      .panel-copy h3 {
+        margin-bottom: 14px;
+        font-size: clamp(1.75rem, 2.6vw, 2.35rem);
+      }
+
+      .panel-copy > p {
+        margin-bottom: 26px;
+        color: var(--muted);
+        font-size: 1.02rem;
+      }
+
+      .panel-features {
+        display: grid;
+        gap: 13px;
+      }
+
+      .panel-feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+      }
+
+      .panel-feature i {
+        width: 26px;
+        height: 26px;
+        display: grid;
+        flex: 0 0 26px;
+        place-items: center;
+        margin-top: 2px;
+        border-radius: 50%;
+        color: var(--green);
+        background: var(--green-soft);
+        font-size: 0.88rem;
+      }
+
+      .panel-feature span {
+        color: #425167;
+      }
+
+      .panel-visual {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 26px;
+        color: #fff;
+        background: var(--navy-900);
+      }
+
+      .mock-window {
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 22px 50px rgba(1, 20, 38, 0.28);
+      }
+
+      .mock-toolbar {
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 14px;
+        border-bottom: 1px solid #e6ebf0;
+        color: #6d7b8d;
+        background: #f8fafc;
+        font-size: 0.75rem;
+      }
+
+      .mock-dots {
+        display: flex;
+        gap: 5px;
+      }
+
+      .mock-dots span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #ced6df;
+      }
+
+      .mock-body {
+        min-height: 400px;
+        display: grid;
+        grid-template-columns: 86px 1fr;
+        direction: ltr;
+      }
+
+      .mock-sidebar {
+        padding: 18px 12px;
+        background: var(--navy-950);
+      }
+
+      .mock-logo {
+        width: 42px;
+        height: 42px;
+        margin: 0 auto 24px;
+        object-fit: contain;
+      }
+
+      .mock-nav-line {
+        height: 7px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.18);
+      }
+
+      .mock-nav-line.active {
+        background: var(--gold);
+      }
+
+      .mock-content {
+        padding: 22px;
+        color: var(--ink);
+        background: #f4f7fa;
+        direction: rtl;
+      }
+
+      .mock-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .mock-title strong {
+        color: var(--navy-950);
+        font-size: 0.92rem;
+      }
+
+      .mock-title span {
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: var(--green);
+        background: var(--green-soft);
+        font-size: 0.67rem;
+      }
+
+      .mock-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+
+      .mock-stat {
+        min-width: 0;
+        padding: 12px;
+        border: 1px solid #e0e6ed;
+        border-radius: 6px;
         background: #fff;
       }
 
-      .scale-content p {
-        max-width: 620px;
-        margin-bottom: 26px;
+      .mock-stat small {
+        display: block;
+        overflow: hidden;
+        margin-bottom: 6px;
+        color: #7a8795;
+        font-size: 0.6rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .mock-stat b {
+        color: var(--navy-900);
+        font-size: 1rem;
+      }
+
+      .mock-chart {
+        height: 146px;
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+        padding: 18px 15px 12px;
+        border: 1px solid #e0e6ed;
+        border-radius: 6px;
+        background: repeating-linear-gradient(
+          to top,
+          #fff,
+          #fff 28px,
+          #edf1f5 29px
+        );
+      }
+
+      .mock-bar {
+        flex: 1;
+        min-width: 7px;
+        border-radius: 3px 3px 0 0;
+        background: var(--navy-800);
+        transform-origin: bottom;
+        animation: grow-bar 700ms ease both;
+      }
+
+      .mock-bar:nth-child(2n) {
+        background: var(--gold);
+      }
+
+      .mock-table {
+        display: grid;
+        gap: 7px;
+        margin-top: 12px;
+      }
+
+      .mock-row {
+        height: 10px;
+        border-radius: 4px;
+        background: linear-gradient(90deg, #dce4ec 22%, transparent 22% 27%, #e5ebf1 27% 66%, transparent 66% 72%, #dbe4ec 72%);
+      }
+
+      @keyframes grow-bar {
+        from {
+          transform: scaleY(0.2);
+        }
+        to {
+          transform: scaleY(1);
+        }
+      }
+
+      .scale {
+        padding-block: 0 !important;
+        border-bottom: 1px solid var(--line);
+        background: #fff;
+      }
+
+      .scale-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 560px;
+      }
+
+      .scale-image {
+        position: relative;
+        overflow: hidden;
+        background: var(--navy-50);
+      }
+
+      .scale-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .scale-note {
+        position: absolute;
+        right: 26px;
+        bottom: 24px;
+        left: 26px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 17px;
+        border: 1px solid rgba(255, 255, 255, 0.82);
+        border-radius: 7px;
+        color: var(--navy-950);
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: var(--shadow-sm);
+        font-weight: 600;
+        backdrop-filter: blur(12px);
+      }
+
+      .scale-note i {
+        color: var(--green);
+        font-size: 1.4rem;
+      }
+
+      .scale-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px clamp(32px, 6vw, 92px);
+      }
+
+      .scale-copy > p:last-of-type {
+        margin-bottom: 25px;
         color: var(--muted);
         font-size: 1.08rem;
       }
 
-      .scale-options {
-        display: flex;
-        flex-wrap: wrap;
+      .scale-steps {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
       }
 
-      .scale-options span {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 12px;
+      .scale-step {
+        padding: 15px 12px;
         border: 1px solid var(--line);
-        border-radius: 6px;
-        color: var(--navy);
+        border-radius: 7px;
         background: #fff;
-        font-weight: 600;
       }
 
-      .scale-options i {
-        color: var(--green);
+      .scale-step b {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--navy-900);
       }
 
-      .scale-visual {
-        position: relative;
-        overflow: hidden;
-        background: var(--navy-soft);
-      }
-
-      .scale-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+      .scale-step small {
+        color: var(--muted);
+        font-size: 0.76rem;
       }
 
       .about {
-        border-top: 1px solid var(--line);
-        background: var(--surface-soft);
+        background: var(--navy-50);
       }
 
       .about-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 72px;
+        grid-template-columns: 1.14fr 0.86fr;
+        gap: 78px;
         align-items: start;
       }
 
       .about-copy p {
-        color: #526074;
+        color: #526174;
         font-size: 1.04rem;
-      }
-
-      .about-copy p:last-child {
-        margin-bottom: 0;
       }
 
       .purpose-stack {
@@ -591,6 +1147,18 @@
         border-right-color: var(--green);
       }
 
+      .purpose-item i {
+        width: 42px;
+        height: 42px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 14px;
+        border-radius: 7px;
+        color: var(--navy-900);
+        background: var(--navy-100);
+        font-size: 1.25rem;
+      }
+
       .purpose-item p {
         margin-bottom: 0;
         color: var(--muted);
@@ -600,145 +1168,77 @@
         background: #fff;
       }
 
-      .why-layout {
+      .why-grid {
         display: grid;
-        grid-template-columns: 0.82fr 1.18fr;
-        gap: 72px;
-        align-items: start;
-      }
-
-      .why-summary {
-        position: sticky;
-        top: 120px;
-      }
-
-      .why-summary p {
-        color: var(--muted);
-        font-size: 1.08rem;
-      }
-
-      .why-list {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        border-top: 1px solid var(--line);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid var(--line);
+        background: var(--line);
       }
 
       .why-item {
-        min-height: 154px;
-        padding: 24px 0 24px 24px;
-        border-bottom: 1px solid var(--line);
+        min-height: 220px;
+        padding: 28px;
+        background: #fff;
+        transition: background-color 160ms ease;
       }
 
-      .why-item:nth-child(odd) {
-        padding-right: 24px;
-        border-left: 1px solid var(--line);
+      .why-item:hover {
+        background: var(--navy-50);
       }
 
       .why-item i {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         color: var(--green);
-        font-size: 1.45rem;
+        font-size: 1.55rem;
       }
 
       .why-item p {
         margin-bottom: 0;
         color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .official {
-        border-block: 1px solid var(--line);
-        background: var(--surface-soft);
-      }
-
-      .official-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 14px;
-      }
-
-      .official-link {
-        min-height: 170px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        text-align: center;
-        background: #fff;
-        transition: border-color 180ms ease, box-shadow 180ms ease,
-          transform 180ms ease;
-      }
-
-      .official-link:hover {
-        transform: translateY(-3px);
-        border-color: #b8c5d3;
-        box-shadow: 0 12px 30px rgba(11, 55, 109, 0.08);
-      }
-
-      .official-mark {
-        min-height: 56px;
-        display: grid;
-        place-items: center;
-        color: var(--navy);
-        font-size: 1.34rem;
-        font-weight: 700;
-      }
-
-      .official-mark.fatoora {
-        color: #247f78;
-      }
-
-      .official-mark.zatca {
-        font-size: 2rem;
-      }
-
-      .official-mark.tech img {
-        width: 126px;
-        height: 58px;
-        object-fit: contain;
-      }
-
-      .official-mark.made {
-        padding: 3px 14px;
-        color: #087644;
-        border: 2px solid #087644;
-        font-size: 1.12rem;
-      }
-
-      .official-link > span:last-child {
-        color: #5d6878;
-        font-size: 0.9rem;
-        font-weight: 600;
+        font-size: 0.96rem;
       }
 
       .cta {
-        padding-block: 78px;
+        position: relative;
+        overflow: hidden;
+        padding-block: 82px !important;
         color: #fff;
-        background: var(--navy);
+        background: var(--navy-900);
+      }
+
+      .cta::before {
+        position: absolute;
+        top: -110px;
+        left: 8%;
+        width: 310px;
+        height: 310px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+        box-shadow: 0 0 0 55px rgba(255, 255, 255, 0.03);
+        content: "";
       }
 
       .cta-wrap {
+        position: relative;
+        z-index: 1;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 38px;
+        gap: 44px;
       }
 
       .cta h2 {
-        max-width: 680px;
+        max-width: 690px;
         margin-bottom: 10px;
         color: #fff;
       }
 
       .cta p {
-        max-width: 700px;
+        max-width: 710px;
         margin-bottom: 0;
-        color: #d6e2ef;
+        color: #d6e2ed;
         font-size: 1.05rem;
       }
 
@@ -749,14 +1249,14 @@
       }
 
       .site-footer {
-        padding-block: 54px 24px;
-        color: #d5deea;
-        background: #061d38;
+        padding-block: 56px 24px;
+        color: #d4deea;
+        background: var(--navy-950);
       }
 
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr 0.9fr;
+        grid-template-columns: 1.25fr 0.75fr 0.9fr;
         gap: 52px;
         padding-bottom: 42px;
       }
@@ -764,22 +1264,20 @@
       .footer-brand img {
         width: 118px;
         height: 86px;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
         object-fit: contain;
         object-position: right center;
-        filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.22));
       }
 
       .footer-brand p {
         max-width: 430px;
         margin-bottom: 0;
-        color: #aebdd0;
+        color: #aebdce;
       }
 
       .footer-title {
         margin-bottom: 16px;
         color: #fff;
-        font-size: 1rem;
         font-weight: 700;
       }
 
@@ -790,7 +1288,7 @@
 
       .footer-links a {
         width: fit-content;
-        color: #b9c6d6;
+        color: #b8c5d5;
         transition: color 160ms ease;
       }
 
@@ -815,19 +1313,14 @@
         gap: 20px;
         padding-top: 22px;
         border-top: 1px solid rgba(255, 255, 255, 0.12);
-        color: #8fa0b5;
+        color: #8fa1b5;
         font-size: 0.9rem;
       }
 
-      :focus-visible {
-        outline: 3px solid rgba(232, 170, 37, 0.58);
-        outline-offset: 3px;
-      }
-
-      @media (max-width: 1020px) {
+      @media (max-width: 1040px) {
         .nav-links {
           position: fixed;
-          inset: 76px 0 auto;
+          inset: 78px 0 auto;
           max-height: 0;
           overflow: hidden;
           display: grid;
@@ -838,14 +1331,18 @@
         }
 
         .nav-links.open {
-          max-height: 420px;
+          max-height: 480px;
           border-bottom-color: var(--line);
-          box-shadow: 0 18px 30px rgba(11, 55, 109, 0.08);
+          box-shadow: var(--shadow-sm);
         }
 
         .nav-links a:not(.button) {
           padding: 13px 20px;
-          border-top: 1px solid #eef1f5;
+          border-top: 1px solid #eef2f6;
+        }
+
+        .nav-links a:not(.button)::after {
+          display: none;
         }
 
         .nav-links .button {
@@ -853,7 +1350,8 @@
           margin: 14px 20px 18px;
         }
 
-        .nav-actions .button {
+        .nav-actions .button,
+        .nav-actions .login-link {
           display: none;
         }
 
@@ -861,59 +1359,60 @@
           display: inline-flex;
         }
 
-        .hero {
-          min-height: 780px;
-          align-items: flex-end;
-          background-image: linear-gradient(
-              0deg,
-              #fff 0%,
-              rgba(255, 255, 255, 0.98) 47%,
-              rgba(255, 255, 255, 0.18) 73%,
-              rgba(255, 255, 255, 0) 100%
-            ),
-            url("miqdar-platform.png");
-          background-position: center top;
-          background-size: 100% auto;
+        .hero-grid,
+        .connected-grid,
+        .about-grid {
+          grid-template-columns: 1fr;
         }
 
-        .hero::before {
+        .hero-copy {
+          max-width: 760px;
+        }
+
+        .product-stage {
+          max-width: 680px;
+          width: 100%;
+          margin-inline: auto;
+        }
+
+        .connected-grid {
+          gap: 50px;
+        }
+
+        .platform-map {
+          max-width: 650px;
+          width: 100%;
+          margin-inline: auto;
+        }
+
+        .systems-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .system-tabs {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .system-tab {
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .system-tab small {
           display: none;
         }
 
-        .hero-content {
-          width: 100%;
-          padding-block: 400px 58px;
-        }
-
-        .intro-grid,
-        .about-grid,
-        .why-layout {
-          grid-template-columns: 1fr;
-          gap: 42px;
-        }
-
-        .systems-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .scale-band {
+        .scale-grid {
           grid-template-columns: 1fr;
         }
 
-        .scale-content {
-          padding: 72px 28px;
+        .scale-image {
+          min-height: 520px;
         }
 
-        .scale-visual {
-          min-height: 400px;
-          order: -1;
-        }
-
-        .why-summary {
-          position: static;
-        }
-
-        .official-grid {
+        .why-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
@@ -931,9 +1430,9 @@
         }
       }
 
-      @media (max-width: 660px) {
+      @media (max-width: 760px) {
         .container {
-          width: min(100% - 28px, var(--container));
+          width: min(var(--container), calc(100% - 28px));
         }
 
         .nav-wrap {
@@ -955,24 +1454,11 @@
         }
 
         .hero {
-          min-height: 720px;
-          background-size: auto 390px;
+          padding-block: 56px 66px;
         }
 
-        .hero-content {
-          padding-block: 355px 44px;
-        }
-
-        h1 {
-          font-size: clamp(2.3rem, 11vw, 3.15rem);
-        }
-
-        h2 {
-          font-size: clamp(1.8rem, 8vw, 2.4rem);
-        }
-
-        .hero-copy {
-          font-size: 1rem;
+        .hero-grid {
+          gap: 48px;
         }
 
         .hero-actions,
@@ -986,38 +1472,169 @@
           width: 100%;
         }
 
-        section {
-          padding-block: 72px;
+        .product-stage {
+          min-height: 445px;
         }
 
-        .intro-grid {
-          gap: 34px;
+        .product-frame {
+          inset: 24px 8px 20px;
         }
 
-        .intro-list,
-        .systems-grid,
-        .official-grid,
-        .why-list {
+        .floating-label {
+          padding: 8px 10px;
+          font-size: 0.75rem;
+        }
+
+        .floating-label i {
+          width: 27px;
+          height: 27px;
+          flex-basis: 27px;
+        }
+
+        .label-top {
+          left: 0;
+        }
+
+        .label-side {
+          top: 43%;
+          right: 0;
+        }
+
+        .label-bottom {
+          right: auto;
+          left: 0;
+        }
+
+        .trust-wrap {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .trust-intro {
+          grid-column: 1 / -1;
+          padding: 18px 0;
+          text-align: center;
+        }
+
+        .trust-link {
+          min-height: 105px;
+          border-top: 1px solid var(--line);
+        }
+
+        section:not(.hero) {
+          padding-block: 76px;
+        }
+
+        .platform-map {
+          min-height: 560px;
+        }
+
+        .map-ring {
+          width: 290px;
+          height: 290px;
+        }
+
+        .map-core {
+          width: 125px;
+          height: 125px;
+        }
+
+        .map-core img {
+          width: 74px;
+          height: 74px;
+        }
+
+        .map-node {
+          min-width: 116px;
+          padding: 9px 10px;
+          font-size: 0.76rem;
+        }
+
+        .node-1 {
+          top: 0;
+        }
+
+        .node-2 {
+          top: 118px;
+        }
+
+        .node-3 {
+          right: 0;
+          bottom: 100px;
+        }
+
+        .node-4 {
+          bottom: 0;
+        }
+
+        .node-5 {
+          bottom: 100px;
+          left: 0;
+        }
+
+        .node-6 {
+          top: 118px;
+        }
+
+        .system-tabs {
+          display: flex;
+          overflow-x: auto;
+          padding-bottom: 8px;
+          scroll-snap-type: x mandatory;
+        }
+
+        .system-tab {
+          min-width: 136px;
+          scroll-snap-align: start;
+        }
+
+        .system-panel {
+          min-height: auto;
           grid-template-columns: 1fr;
         }
 
-        .system-card {
-          min-height: auto;
+        .panel-copy {
+          padding: 30px 24px;
         }
 
-        .scale-visual {
-          min-height: 300px;
+        .panel-visual {
+          padding: 18px;
         }
 
-        .scale-content {
+        .mock-body {
+          min-height: 355px;
+          grid-template-columns: 62px 1fr;
+        }
+
+        .mock-content {
+          padding: 14px;
+        }
+
+        .mock-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .mock-stat:last-child {
+          display: none;
+        }
+
+        .scale-image {
+          min-height: 360px;
+        }
+
+        .scale-copy {
           padding: 58px 20px;
         }
 
-        .why-item,
-        .why-item:nth-child(odd) {
+        .scale-steps {
+          grid-template-columns: 1fr;
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-item {
           min-height: auto;
-          padding: 22px 0;
-          border-left: 0;
         }
 
         .footer-grid {
@@ -1043,8 +1660,9 @@
         *,
         *::before,
         *::after {
-          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
           transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
         }
       }
     </style>
@@ -1061,7 +1679,7 @@
         <nav id="main-nav" class="nav-links" aria-label="التنقل الرئيسي">
           <a href="#home">الرئيسية</a>
           <a href="#systems">الأنظمة</a>
-          <a href="#about">من نحن</a>
+          <a href="#about">عن مقدار</a>
           <a href="#why">لماذا مقدار؟</a>
           <a href="#contact">تواصل معنا</a>
           <a
@@ -1077,13 +1695,14 @@
 
         <div class="nav-actions">
           <a
-            class="button button-primary"
+            class="login-link"
             href="https://frontend-miqdar.my.id/"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <i class="ri-login-box-line" aria-hidden="true"></i>
-            الدخول إلى النظام
+          >الدخول</a>
+          <a class="button button-primary" href="mailto:info@miqdar.net?subject=طلب%20عرض%20لنظام%20مقدار">
+            <i class="ri-presentation-line" aria-hidden="true"></i>
+            اطلب عرضًا
           </a>
           <button
             id="menu-toggle"
@@ -1101,56 +1720,133 @@
 
     <main id="main">
       <section id="home" class="hero">
-        <div class="container">
-          <div class="hero-content">
-            <p class="eyebrow">منصة واحدة لأعمال أكثر كفاءة</p>
-            <h1>مقدار لإدارة أعمال منشأتك من مكان واحد</h1>
-            <p class="hero-copy">
-              نظام SaaS يساعد الشركات والمنشآت على إدارة أعمالها وعملياتها اليومية
-              من خلال مجموعة مترابطة من الأنظمة تشمل المحاسبة، المشتريات، الموارد
-              البشرية، المستودعات والتقارير.
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">نظام سعودي متكامل لإدارة الأعمال</p>
+            <h1>منصة واحدة تدير منشأتك بالكامل</h1>
+            <p>
+              مقدار نظام SaaS يربط المحاسبة، المشتريات، الموارد البشرية، المستودعات،
+              المشاريع والجودة في منظومة واحدة؛ لتعمل فرقك ببيانات موحدة وقرارات أوضح.
             </p>
             <div class="hero-actions">
+              <a class="button button-primary" href="mailto:info@miqdar.net?subject=طلب%20عرض%20لنظام%20مقدار">
+                <i class="ri-presentation-line" aria-hidden="true"></i>
+                اطلب عرضًا لنظام مقدار
+              </a>
               <a
-                class="button button-primary"
+                class="button button-outline"
                 href="https://frontend-miqdar.my.id/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="ri-external-link-line" aria-hidden="true"></i>
-                استكشف نظام مقدار
-              </a>
-              <a class="button button-secondary" href="#systems">
-                <i class="ri-layout-grid-line" aria-hidden="true"></i>
-                تعرّف على الأنظمة
+                استكشف المنصة
               </a>
             </div>
-            <div class="hero-proof" aria-label="مزايا مختصرة">
-              <span><i class="ri-check-line" aria-hidden="true"></i>قابل للتخصيص</span>
-              <span><i class="ri-check-line" aria-hidden="true"></i>سحابي ومترابط</span>
-              <span><i class="ri-check-line" aria-hidden="true"></i>ينمو مع أعمالك</span>
+            <div class="hero-points" aria-label="مزايا مختصرة">
+              <span><i class="ri-checkbox-circle-line" aria-hidden="true"></i>قابل للتخصيص</span>
+              <span><i class="ri-checkbox-circle-line" aria-hidden="true"></i>سحابي ومترابط</span>
+              <span><i class="ri-checkbox-circle-line" aria-hidden="true"></i>ينمو مع أعمالك</span>
+            </div>
+          </div>
+
+          <div class="product-stage" aria-label="نظرة على منظومة مقدار">
+            <div class="product-frame">
+              <img
+                src="miqdar-platform.png"
+                alt="أنظمة مقدار المتكاملة لإدارة الشركات"
+                width="796"
+                height="774"
+              />
+            </div>
+            <div class="floating-label label-top">
+              <i class="ri-line-chart-line" aria-hidden="true"></i>
+              رؤية موحدة للأداء
+            </div>
+            <div class="floating-label label-side">
+              <i class="ri-links-line" aria-hidden="true"></i>
+              أقسام مترابطة
+            </div>
+            <div class="floating-label label-bottom">
+              <i class="ri-shield-check-line" aria-hidden="true"></i>
+              صلاحيات وإجراءات واضحة
             </div>
           </div>
         </div>
       </section>
 
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="container intro-grid">
-          <div>
-            <p class="eyebrow">نظام SaaS متكامل</p>
-            <h2 id="intro-title">كل ما تحتاجه منشأتك ضمن منظومة رقمية واحدة</h2>
-            <p class="intro-copy">
-              يوحّد مقدار البيانات والإجراءات بين الإدارات ليمنحك رؤية أوضح، متابعة
-              لحظية، وقرارات مبنية على معلومات دقيقة دون الحاجة إلى أنظمة متفرقة.
-            </p>
+      <div class="trust-strip" aria-label="روابط الجهات والبرامج الرسمية">
+        <div class="container trust-wrap">
+          <div class="trust-intro">
+            <strong>بيئة أعمال سعودية موثوقة</strong>
+            <span>روابط مباشرة للجهات والبرامج الرسمية ذات الصلة</span>
           </div>
-          <div class="intro-list" aria-label="نطاق المنصة">
-            <span><i class="ri-funds-box-line" aria-hidden="true"></i>الإدارة المالية</span>
-            <span><i class="ri-team-line" aria-hidden="true"></i>الموارد البشرية</span>
-            <span><i class="ri-shopping-cart-2-line" aria-hidden="true"></i>المشتريات</span>
-            <span><i class="ri-archive-stack-line" aria-hidden="true"></i>المخزون والمستودعات</span>
-            <span><i class="ri-briefcase-4-line" aria-hidden="true"></i>إدارة المشاريع</span>
-            <span><i class="ri-bar-chart-box-line" aria-hidden="true"></i>التقارير والأداء</span>
+          <a
+            class="trust-link"
+            href="https://www.zatca.gov.sa/ar/E-Invoicing/Introduction/Pages/What-is-e-invoicing.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="trust-mark">فاتورة</span>
+            <small>الفوترة الإلكترونية</small>
+          </a>
+          <a
+            class="trust-link"
+            href="https://zatca.gov.sa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="ri-government-line" aria-hidden="true"></i>
+            <strong>هيئة الزكاة والضريبة والجمارك</strong>
+          </a>
+          <a
+            class="trust-link"
+            href="https://www.cst.gov.sa/about/program-and-initiatives/saudi-tech-technology"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="saudi-tech.svg" alt="تقنية سعودية" width="68" height="45" />
+            <small>المنتج التقني الوطني</small>
+          </a>
+          <a
+            class="trust-link"
+            href="https://saudimade.sa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="trust-mark">صناعة سعودية</span>
+            <small>برنامج صنع في السعودية</small>
+          </a>
+        </div>
+      </div>
+
+      <section class="connected" aria-labelledby="connected-title">
+        <div class="container connected-grid">
+          <div class="connected-copy">
+            <p class="eyebrow">كل شيء في مكان واحد</p>
+            <h2 id="connected-title">كل قسم متصل، وكل معلومة في مكانها</h2>
+            <p>
+              بدلًا من تكرار البيانات بين أنظمة منفصلة، يربط مقدار الإدارات في دورة
+              عمل واحدة. ما يبدأ كطلب شراء ينعكس على المخزون والمشروع والحسابات بوضوح.
+            </p>
+            <div class="connection-list">
+              <span><i class="ri-check-line" aria-hidden="true"></i>بيانات موحدة بين الإدارات</span>
+              <span><i class="ri-check-line" aria-hidden="true"></i>إجراءات وموافقات منظمة</span>
+              <span><i class="ri-check-line" aria-hidden="true"></i>متابعة وتقارير من مصدر واحد</span>
+            </div>
+          </div>
+
+          <div class="platform-map" aria-label="خريطة ترابط أنظمة مقدار">
+            <div class="map-ring" aria-hidden="true"></div>
+            <div class="map-core">
+              <img src="miqdar-logo.png" alt="مقدار" width="92" height="92" />
+            </div>
+            <div class="map-node node-1"><i class="ri-team-line" aria-hidden="true"></i>الموارد البشرية</div>
+            <div class="map-node node-2"><i class="ri-calculator-line" aria-hidden="true"></i>المحاسبة</div>
+            <div class="map-node node-3"><i class="ri-shopping-cart-line" aria-hidden="true"></i>المشتريات</div>
+            <div class="map-node node-4"><i class="ri-briefcase-4-line" aria-hidden="true"></i>المشاريع</div>
+            <div class="map-node node-5"><i class="ri-warehouse-line" aria-hidden="true"></i>المستودعات</div>
+            <div class="map-node node-6"><i class="ri-shield-check-line" aria-hidden="true"></i>الجودة</div>
           </div>
         </div>
       </section>
@@ -1159,81 +1855,134 @@
         <div class="container">
           <div class="section-heading center">
             <p class="eyebrow">أنظمة مقدار</p>
-            <h2 id="systems-title">إدارة مترابطة لكل جانب من أعمالك</h2>
+            <h2 id="systems-title">حلول عملية لكل جانب من أعمالك</h2>
             <p>
-              وحدات مرنة تعمل معًا، ويمكن تهيئتها حسب طبيعة منشأتك واحتياجاتها.
+              اختر النظام لتتعرف على ما يقدمه، وكيف يعمل ضمن المنظومة المتكاملة.
             </p>
           </div>
 
-          <div class="systems-grid">
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-calculator-line" aria-hidden="true"></i></span>
-              <h3>المحاسبة والمالية</h3>
-              <p>إدارة الحسابات والفواتير والأصول والمصروفات والقيود والتقارير المالية.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-shopping-bag-3-line" aria-hidden="true"></i></span>
-              <h3>المشتريات</h3>
-              <p>تنظيم الطلبات وعروض الأسعار وأوامر الشراء وإدارة الموردين بوضوح.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-group-line" aria-hidden="true"></i></span>
-              <h3>الموارد البشرية</h3>
-              <p>إدارة بيانات الموظفين والعقود والحضور والإجازات والمهام اليومية.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-warehouse-line" aria-hidden="true"></i></span>
-              <h3>المستودعات والمخزون</h3>
-              <p>متابعة الكميات والحركة والاستلام والصرف والتنبيهات من شاشة موحدة.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-kanban-view-2" aria-hidden="true"></i></span>
-              <h3>إدارة المشاريع</h3>
-              <p>تخطيط المشاريع ومتابعة فرق العمل والمهام والاحتياجات والتكاليف.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-shield-check-line" aria-hidden="true"></i></span>
-              <h3>الجودة والامتثال</h3>
-              <p>توثيق السياسات والإجراءات ومتابعة الالتزام والتحسين المستمر.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-settings-5-line" aria-hidden="true"></i></span>
-              <h3>إدارة العمليات</h3>
-              <p>أتمتة الإجراءات والموافقات وربط الإدارات ضمن دورة عمل واضحة.</p>
-            </article>
-            <article class="system-card">
-              <span class="system-icon"><i class="ri-line-chart-line" aria-hidden="true"></i></span>
-              <h3>التقارير ولوحات التحكم</h3>
-              <p>مؤشرات لحظية ورؤية موحدة تدعم الإدارة في اتخاذ قرارات أدق وأسرع.</p>
-            </article>
+          <div class="systems-layout">
+            <div class="system-tabs" role="tablist" aria-label="أنظمة مقدار">
+              <button class="system-tab" type="button" role="tab" aria-selected="true" data-system="finance">
+                <i class="ri-calculator-line" aria-hidden="true"></i>
+                <span><strong>المحاسبة والمالية</strong><small>حسابات وتقارير مترابطة</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="purchasing">
+                <i class="ri-shopping-bag-3-line" aria-hidden="true"></i>
+                <span><strong>المشتريات</strong><small>من الطلب حتى أمر الشراء</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="hr">
+                <i class="ri-group-line" aria-hidden="true"></i>
+                <span><strong>الموارد البشرية</strong><small>الموظفون والعقود والإجازات</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="warehouse">
+                <i class="ri-warehouse-line" aria-hidden="true"></i>
+                <span><strong>المستودعات</strong><small>مخزون وحركة وتنبيهات</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="projects">
+                <i class="ri-kanban-view-2" aria-hidden="true"></i>
+                <span><strong>إدارة المشاريع</strong><small>فرق ومهام وتكاليف</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="quality">
+                <i class="ri-shield-check-line" aria-hidden="true"></i>
+                <span><strong>الجودة والامتثال</strong><small>سياسات ووثائق ومتابعة</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="operations">
+                <i class="ri-settings-5-line" aria-hidden="true"></i>
+                <span><strong>إدارة العمليات</strong><small>إجراءات وموافقات واضحة</small></span>
+              </button>
+              <button class="system-tab" type="button" role="tab" aria-selected="false" data-system="reports">
+                <i class="ri-line-chart-line" aria-hidden="true"></i>
+                <span><strong>التقارير</strong><small>مؤشرات لحظية وموحدة</small></span>
+              </button>
+            </div>
+
+            <div id="system-panel" class="system-panel" role="tabpanel" aria-live="polite">
+              <div class="panel-copy">
+                <span id="panel-kicker" class="panel-kicker">إدارة مالية أوضح</span>
+                <h3 id="panel-title">المحاسبة والمالية</h3>
+                <p id="panel-description">
+                  متابعة الحسابات والفواتير والأصول والمصروفات والقيود ضمن دورة مالية مترابطة مع بقية أنظمة المنشأة.
+                </p>
+                <div id="panel-features" class="panel-features">
+                  <div class="panel-feature"><i class="ri-check-line" aria-hidden="true"></i><span>شجرة حسابات وقيود يومية منظمة</span></div>
+                  <div class="panel-feature"><i class="ri-check-line" aria-hidden="true"></i><span>ربط الفواتير والمصروفات بالمشاريع</span></div>
+                  <div class="panel-feature"><i class="ri-check-line" aria-hidden="true"></i><span>تقارير مالية ومراكز تكلفة واضحة</span></div>
+                </div>
+              </div>
+
+              <div class="panel-visual" aria-label="تصور للوحة تحكم مقدار">
+                <div class="mock-window">
+                  <div class="mock-toolbar">
+                    <span id="mock-label">لوحة المحاسبة</span>
+                    <div class="mock-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                  </div>
+                  <div class="mock-body">
+                    <aside class="mock-sidebar" aria-hidden="true">
+                      <img class="mock-logo" src="miqdar-logo.png" alt="" width="42" height="42" />
+                      <div class="mock-nav-line active"></div>
+                      <div class="mock-nav-line"></div>
+                      <div class="mock-nav-line"></div>
+                      <div class="mock-nav-line"></div>
+                      <div class="mock-nav-line"></div>
+                    </aside>
+                    <div class="mock-content">
+                      <div class="mock-title">
+                        <strong id="mock-title">الملخص المالي</strong>
+                        <span>محدّث الآن</span>
+                      </div>
+                      <div class="mock-stats">
+                        <div class="mock-stat"><small>المؤشر الأول</small><b>24,850</b></div>
+                        <div class="mock-stat"><small>المؤشر الثاني</small><b>18,240</b></div>
+                        <div class="mock-stat"><small>المؤشر الثالث</small><b>96%</b></div>
+                      </div>
+                      <div class="mock-chart" aria-hidden="true">
+                        <span class="mock-bar" style="height: 38%"></span>
+                        <span class="mock-bar" style="height: 62%"></span>
+                        <span class="mock-bar" style="height: 49%"></span>
+                        <span class="mock-bar" style="height: 82%"></span>
+                        <span class="mock-bar" style="height: 68%"></span>
+                        <span class="mock-bar" style="height: 94%"></span>
+                        <span class="mock-bar" style="height: 75%"></span>
+                      </div>
+                      <div class="mock-table" aria-hidden="true">
+                        <div class="mock-row"></div>
+                        <div class="mock-row"></div>
+                        <div class="mock-row"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="scale-section" aria-labelledby="scale-title">
-        <div class="scale-band">
-          <div class="scale-content">
+      <section class="scale" aria-labelledby="scale-title">
+        <div class="scale-grid">
+          <div class="scale-copy">
             <p class="eyebrow">مرونة تناسب نموك</p>
-            <h2 id="scale-title">نظام مقدار يناسب جميع الشركات</h2>
+            <h2 id="scale-title">مقدار يناسب جميع الشركات</h2>
             <p>
               سواء كانت شركتك كبيرة، متوسطة أو صغيرة، يتيح لك مقدار اختيار وتخصيص
-              الباقة التي تتناسب مع احتياجات منشأتك، مع إمكانية التوسع وإضافة
-              الخدمات والميزات حسب نمو أعمالك.
+              الباقة المناسبة، ثم إضافة الأنظمة والميزات تدريجيًا حسب نمو أعمالك.
             </p>
-            <div class="scale-options">
-              <span><i class="ri-building-line" aria-hidden="true"></i>منشآت كبيرة</span>
-              <span><i class="ri-community-line" aria-hidden="true"></i>شركات متوسطة</span>
-              <span><i class="ri-store-2-line" aria-hidden="true"></i>أعمال صغيرة</span>
+            <div class="scale-steps">
+              <div class="scale-step"><b>ابدأ بما تحتاج</b><small>اختر الأنظمة المناسبة الآن</small></div>
+              <div class="scale-step"><b>خصّص إجراءاتك</b><small>هيّئ المنصة لطبيعة عملك</small></div>
+              <div class="scale-step"><b>توسّع بثقة</b><small>أضف الخدمات مع نموك</small></div>
             </div>
           </div>
-          <div class="scale-visual">
+          <div class="scale-image">
             <img
               src="miqdar-platform.png"
-              alt="أنظمة مقدار المتكاملة لإدارة الشركات الصغيرة والمتوسطة والكبيرة"
+              alt="نظام مقدار للشركات الصغيرة والمتوسطة والكبيرة"
               width="796"
               height="774"
               loading="lazy"
             />
+            <div class="scale-note"><i class="ri-expand-diagonal-line" aria-hidden="true"></i>منظومة مرنة تتوسع مع احتياجات منشأتك</div>
           </div>
         </div>
       </section>
@@ -1241,158 +1990,50 @@
       <section id="about" class="about" aria-labelledby="about-title">
         <div class="container about-grid">
           <div class="about-copy">
-            <p class="eyebrow">من نحن؟</p>
+            <p class="eyebrow">عن مقدار</p>
             <h2 id="about-title">حل رقمي شامل للمنشآت بمختلف أحجامها وقطاعاتها</h2>
             <p>
               مقدار منصة متكاملة لإدارة الأعمال، صُممت لتكون الحل الرقمي الشامل
-              للمنشآت بمختلف أحجامها وقطاعاتها، من الشركات الصغيرة والمتوسطة إلى
-              المنشآت الكبيرة.
+              للمنشآت بمختلف أحجامها وقطاعاتها، من الشركات الصغيرة والمتوسطة إلى المنشآت الكبيرة.
             </p>
             <p>
-              تجمع مقدار مختلف جوانب إدارة المنشأة في منصة واحدة، وتوفر حلولًا
-              متكاملة تشمل الإدارة المالية والمحاسبة، الموارد البشرية، المشتريات،
-              المخازن، إدارة المشاريع، الجودة وإدارة العمليات، مع إمكانية تهيئة
-              النظام وفق طبيعة كل منشأة واحتياجاتها.
+              تجمع مقدار الإدارة المالية والمحاسبة، الموارد البشرية، المشتريات،
+              المخازن، المشاريع، الجودة والعمليات في منصة واحدة قابلة للتهيئة وفق طبيعة كل منشأة.
             </p>
             <p>
-              من خلال مقدار، يمكن للمنشآت توحيد بياناتها وعملياتها، متابعة الأداء،
-              تنظيم الإجراءات وتحسين كفاءة العمل عبر منظومة رقمية مترابطة تساعد
-              الإدارة على الحصول على رؤية واضحة وشاملة لأعمال المنشأة.
+              من خلال مقدار، توحّد المنشآت بياناتها وعملياتها، تتابع الأداء وتنظم
+              الإجراءات ضمن منظومة رقمية مترابطة تمنح الإدارة رؤية واضحة وشاملة.
             </p>
           </div>
-
           <div class="purpose-stack">
             <article class="purpose-item">
+              <i class="ri-focus-3-line" aria-hidden="true"></i>
               <h3>رؤيتنا</h3>
-              <p>
-                أن نكون المنصة الرقمية المتكاملة التي تمكّن المنشآت من إدارة
-                أعمالها بكفاءة ومرونة، وتدعم نموها وتطورها في عالم الأعمال المتغير.
-              </p>
+              <p>أن نكون المنصة الرقمية المتكاملة التي تمكّن المنشآت من إدارة أعمالها بكفاءة ومرونة، وتدعم نموها وتطورها.</p>
             </article>
             <article class="purpose-item">
+              <i class="ri-rocket-2-line" aria-hidden="true"></i>
               <h3>مهمتنا</h3>
-              <p>
-                تمكين المنشآت من إدارة أعمالها وعملياتها من خلال حلول رقمية متكاملة
-                وقابلة للتخصيص، تساهم في رفع الكفاءة، تقليل الهدر، تحسين الأداء
-                وتسهيل اتخاذ القرارات.
-              </p>
+              <p>تقديم حلول رقمية متكاملة وقابلة للتخصيص ترفع الكفاءة، تقلل الهدر، تحسن الأداء وتسهّل اتخاذ القرار.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section id="why" class="why" aria-labelledby="why-title">
-        <div class="container why-layout">
-          <div class="why-summary">
-            <p class="eyebrow">لماذا مقدار؟</p>
-            <h2 id="why-title">منصة تنظم أعمالك اليوم وتواكب توسعك غدًا</h2>
-            <p>
-              بنية مرنة تجمع البيانات والعمليات في تجربة واحدة، لتعمل فرقك بصورة
-              أكثر ترابطًا ووضوحًا.
-            </p>
-            <a
-              class="button button-primary"
-              href="https://frontend-miqdar.my.id/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="ri-window-line" aria-hidden="true"></i>
-              زيارة منصة مقدار
-            </a>
-          </div>
-
-          <div class="why-list">
-            <article class="why-item">
-              <i class="ri-apps-2-line" aria-hidden="true"></i>
-              <h3>منصة واحدة</h3>
-              <p>إدارة مختلف جوانب المنشأة من واجهة موحدة.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-links-line" aria-hidden="true"></i>
-              <h3>حلول مترابطة</h3>
-              <p>تدفق متكامل للبيانات بين الأنظمة والإدارات.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-equalizer-2-line" aria-hidden="true"></i>
-              <h3>قابل للتخصيص</h3>
-              <p>تهيئة مرنة حسب احتياجات المنشأة وإجراءاتها.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-building-4-line" aria-hidden="true"></i>
-              <h3>لكل الأحجام</h3>
-              <p>مناسب للمنشآت الصغيرة والمتوسطة والكبيرة.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-global-line" aria-hidden="true"></i>
-              <h3>لمختلف القطاعات</h3>
-              <p>مرونة تخدم تنوع الأنشطة ونماذج التشغيل.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-dashboard-line" aria-hidden="true"></i>
-              <h3>رؤية موحدة</h3>
-              <p>لوحات وتقارير تجمع البيانات والأداء في صورة واضحة.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-git-merge-line" aria-hidden="true"></i>
-              <h3>أتمتة العمليات</h3>
-              <p>تنظيم الإجراءات والموافقات وتقليل العمل اليدوي.</p>
-            </article>
-            <article class="why-item">
-              <i class="ri-expand-diagonal-line" aria-hidden="true"></i>
-              <h3>قابل للتوسع</h3>
-              <p>إضافة الخدمات والميزات مع نمو أعمال المنشأة.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="official" aria-labelledby="official-title">
         <div class="container">
           <div class="section-heading center">
-            <p class="eyebrow">روابط موثوقة</p>
-            <h2 id="official-title">الجهات والبرامج الرسمية ذات الصلة</h2>
-            <p>وصول مباشر إلى المواقع الرسمية للتقنية والامتثال والمنتج الوطني.</p>
+            <p class="eyebrow">لماذا مقدار؟</p>
+            <h2 id="why-title">وضوح أكبر، عمل أسرع، وتوسع أسهل</h2>
+            <p>منصة مصممة لتخدم احتياج المنشأة اليوم، وتبقى جاهزة لما هو قادم.</p>
           </div>
-
-          <div class="official-grid">
-            <a
-              class="official-link"
-              href="https://www.zatca.gov.sa/ar/E-Invoicing/Introduction/Pages/What-is-e-invoicing.aspx"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="official-mark fatoora">فاتورة <small>FATOORA</small></span>
-              <span>الفوترة الإلكترونية</span>
-            </a>
-            <a
-              class="official-link"
-              href="https://zatca.gov.sa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="official-mark zatca"><i class="ri-government-line" aria-hidden="true"></i></span>
-              <span>هيئة الزكاة والضريبة والجمارك</span>
-            </a>
-            <a
-              class="official-link"
-              href="https://www.cst.gov.sa/about/program-and-initiatives/saudi-tech-technology"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="official-mark tech">
-                <img src="saudi-tech.svg" alt="تقنية سعودية" width="126" height="58" loading="lazy" />
-              </span>
-              <span>الهوية الوطنية للمنتج التقني</span>
-            </a>
-            <a
-              class="official-link"
-              href="https://saudimade.sa/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="official-mark made">صناعة سعودية</span>
-              <span>برنامج صنع في السعودية</span>
-            </a>
+          <div class="why-grid">
+            <article class="why-item"><i class="ri-apps-2-line" aria-hidden="true"></i><h3>منصة واحدة</h3><p>إدارة مختلف جوانب المنشأة من واجهة موحدة بدل التنقل بين أنظمة متفرقة.</p></article>
+            <article class="why-item"><i class="ri-links-line" aria-hidden="true"></i><h3>حلول مترابطة</h3><p>تدفق منظم للبيانات والإجراءات بين الإدارات والأنظمة.</p></article>
+            <article class="why-item"><i class="ri-equalizer-2-line" aria-hidden="true"></i><h3>قابل للتخصيص</h3><p>تهيئة مرنة حسب احتياجات المنشأة وإجراءاتها وطريقة عمل فرقها.</p></article>
+            <article class="why-item"><i class="ri-global-line" aria-hidden="true"></i><h3>لمختلف القطاعات</h3><p>مرونة تدعم تنوع الأنشطة ونماذج التشغيل وأحجام المنشآت.</p></article>
+            <article class="why-item"><i class="ri-dashboard-line" aria-hidden="true"></i><h3>رؤية موحدة</h3><p>لوحات وتقارير تجمع البيانات والأداء في صورة واضحة تساعد على القرار.</p></article>
+            <article class="why-item"><i class="ri-git-merge-line" aria-hidden="true"></i><h3>أتمتة العمليات</h3><p>تنظيم الإجراءات والموافقات وتقليل العمل اليدوي وتكرار الإدخال.</p></article>
           </div>
         </div>
       </section>
@@ -1400,26 +2041,13 @@
       <section id="contact" class="cta" aria-labelledby="cta-title">
         <div class="container cta-wrap">
           <div>
-            <h2 id="cta-title">ابدأ إدارة أعمالك بصورة أوضح مع مقدار</h2>
-            <p>
-              تواصل مع فريق مقدار لمعرفة الوحدات المناسبة لاحتياج منشأتك، أو انتقل
-              مباشرة إلى المنصة.
-            </p>
+            <p class="eyebrow">ابدأ بخطوة واضحة</p>
+            <h2 id="cta-title">دعنا نأخذك في جولة داخل مقدار</h2>
+            <p>تواصل مع فريق مقدار للتعرف على الأنظمة المناسبة لاحتياج منشأتك، أو انتقل مباشرة إلى المنصة.</p>
           </div>
           <div class="cta-actions">
-            <a
-              class="button button-light"
-              href="https://frontend-miqdar.my.id/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="ri-external-link-line" aria-hidden="true"></i>
-              فتح نظام مقدار
-            </a>
-            <a class="button button-secondary" href="mailto:info@miqdar.net">
-              <i class="ri-mail-line" aria-hidden="true"></i>
-              راسلنا
-            </a>
+            <a class="button button-light" href="mailto:info@miqdar.net?subject=طلب%20عرض%20لنظام%20مقدار"><i class="ri-mail-send-line" aria-hidden="true"></i>اطلب عرضًا</a>
+            <a class="button button-outline" href="tel:+966501950787"><i class="ri-phone-line" aria-hidden="true"></i><bdi dir="ltr">+966 50 195 0787</bdi></a>
           </div>
         </div>
       </section>
@@ -1430,36 +2058,25 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <img src="miqdar-logo.png" alt="مقدار" width="118" height="86" />
-            <p>
-              منصة SaaS متكاملة لإدارة أعمال المنشآت وعملياتها اليومية بكفاءة ومرونة.
-            </p>
+            <p>منصة SaaS متكاملة لإدارة أعمال المنشآت وعملياتها اليومية بكفاءة ومرونة.</p>
           </div>
-
           <div>
             <div class="footer-title">روابط سريعة</div>
             <div class="footer-links">
               <a href="#systems">أنظمة مقدار</a>
-              <a href="#about">من نحن</a>
+              <a href="#about">عن مقدار</a>
               <a href="#why">لماذا مقدار؟</a>
               <a href="https://frontend-miqdar.my.id/" target="_blank" rel="noopener noreferrer">الدخول إلى النظام</a>
             </div>
           </div>
-
           <div>
             <div class="footer-title">تواصل معنا</div>
             <div class="footer-links">
-              <a class="contact-link" href="mailto:info@miqdar.net">
-                <i class="ri-mail-line" aria-hidden="true"></i>
-                <span dir="ltr">info@miqdar.net</span>
-              </a>
-              <a class="contact-link" href="tel:+966501950787">
-                <i class="ri-phone-line" aria-hidden="true"></i>
-                <bdi dir="ltr">+966 50 195 0787</bdi>
-              </a>
+              <a class="contact-link" href="mailto:info@miqdar.net"><i class="ri-mail-line" aria-hidden="true"></i><span dir="ltr">info@miqdar.net</span></a>
+              <a class="contact-link" href="tel:+966501950787"><i class="ri-phone-line" aria-hidden="true"></i><bdi dir="ltr">+966 50 195 0787</bdi></a>
             </div>
           </div>
         </div>
-
         <div class="footer-bottom">
           <span>© <span id="year">2026</span> مقدار. جميع الحقوق محفوظة.</span>
           <span>منصة سعودية لإدارة الأعمال</span>
@@ -1488,12 +2105,114 @@
         menuIcon.className = isOpen ? "ri-close-line" : "ri-menu-line";
       });
 
-      mainNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
+      mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1040) closeMenu();
       });
 
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 1020) closeMenu();
+      const systems = {
+        finance: {
+          kicker: "إدارة مالية أوضح",
+          title: "المحاسبة والمالية",
+          description: "متابعة الحسابات والفواتير والأصول والمصروفات والقيود ضمن دورة مالية مترابطة مع بقية أنظمة المنشأة.",
+          label: "لوحة المحاسبة",
+          mockTitle: "الملخص المالي",
+          features: ["شجرة حسابات وقيود يومية منظمة", "ربط الفواتير والمصروفات بالمشاريع", "تقارير مالية ومراكز تكلفة واضحة"]
+        },
+        purchasing: {
+          kicker: "مشتريات تحت السيطرة",
+          title: "إدارة المشتريات",
+          description: "نظّم دورة الشراء من الطلب وعروض الأسعار حتى إصدار أمر الشراء ومتابعة الموردين والتنفيذ.",
+          label: "لوحة المشتريات",
+          mockTitle: "حالة طلبات الشراء",
+          features: ["طلبات شراء وموافقات رقمية", "مقارنة عروض الأسعار والموردين", "متابعة أوامر الشراء وحالتها"]
+        },
+        hr: {
+          kicker: "فريقك في صورة واحدة",
+          title: "الموارد البشرية",
+          description: "أدر بيانات الموظفين والعقود والحضور والإجازات والمهام في ملفات منظمة ومتصلة بعمليات المنشأة.",
+          label: "لوحة الموارد البشرية",
+          mockTitle: "ملخص شؤون الموظفين",
+          features: ["ملفات موظفين وعقود موحدة", "إدارة الحضور والإجازات", "ربط الطواقم بالمشاريع والمهام"]
+        },
+        warehouse: {
+          kicker: "مخزون تعرفه لحظة بلحظة",
+          title: "المستودعات والمخزون",
+          description: "تابع الكميات وحركة الأصناف والاستلام والصرف والتنبيهات عبر المستودعات ومواقع التخزين المختلفة.",
+          label: "لوحة المستودعات",
+          mockTitle: "حركة المخزون",
+          features: ["رصيد لحظي لكل صنف ومستودع", "استلام وصرف وتحويل موثق", "تنبيهات النقص وقرب انتهاء الصلاحية"]
+        },
+        projects: {
+          kicker: "من الخطة إلى الإنجاز",
+          title: "إدارة المشاريع",
+          description: "خطط المشاريع، وزّع المهام، تابع الفرق والمواد والمشتريات والتكاليف من بداية المشروع حتى إغلاقه.",
+          label: "لوحة المشاريع",
+          mockTitle: "تقدم المشاريع",
+          features: ["حالة المشاريع ونسب الإنجاز", "مهام وطواقم واحتياجات واضحة", "ربط المواد والمشتريات بالمشروع"]
+        },
+        quality: {
+          kicker: "جودة موثقة وقابلة للمتابعة",
+          title: "الجودة والامتثال",
+          description: "نظّم السياسات والوثائق والسجلات وعمليات التدقيق، وتابع الإجراءات التصحيحية والتحسين المستمر.",
+          label: "لوحة الجودة",
+          mockTitle: "مؤشرات الالتزام",
+          features: ["سياسات ووثائق بإصدارات منظمة", "متابعة التدقيق وعدم المطابقة", "سجلات وتقارير للتحسين المستمر"]
+        },
+        operations: {
+          kicker: "إجراءات تنساب بوضوح",
+          title: "إدارة العمليات",
+          description: "حوّل الإجراءات المتكررة والموافقات إلى مسارات واضحة تقلل التأخير وتمنح كل فريق ما يحتاجه في الوقت المناسب.",
+          label: "لوحة العمليات",
+          mockTitle: "سير الإجراءات",
+          features: ["مسارات موافقات محددة", "حالات وتنبيهات قابلة للمتابعة", "ربط الإجراء بالإدارة والمشروع"]
+        },
+        reports: {
+          kicker: "قرار مبني على بياناتك",
+          title: "التقارير ولوحات التحكم",
+          description: "اجمع مؤشرات الأنظمة في لوحات موحدة تساعد الإدارة على متابعة الأداء وفهم الاتجاهات واتخاذ قرارات أدق.",
+          label: "لوحة التقارير",
+          mockTitle: "مؤشرات المنشأة",
+          features: ["مؤشرات أداء لحظية", "تقارير موحدة عبر الإدارات", "رؤية واضحة للتكاليف والإنجاز"]
+        }
+      };
+
+      const tabs = [...document.querySelectorAll(".system-tab")];
+      const panelKicker = document.getElementById("panel-kicker");
+      const panelTitle = document.getElementById("panel-title");
+      const panelDescription = document.getElementById("panel-description");
+      const panelFeatures = document.getElementById("panel-features");
+      const mockLabel = document.getElementById("mock-label");
+      const mockTitle = document.getElementById("mock-title");
+
+      function selectSystem(tab) {
+        const system = systems[tab.dataset.system];
+        tabs.forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+        panelKicker.textContent = system.kicker;
+        panelTitle.textContent = system.title;
+        panelDescription.textContent = system.description;
+        mockLabel.textContent = system.label;
+        mockTitle.textContent = system.mockTitle;
+        panelFeatures.innerHTML = system.features
+          .map((feature) => `<div class="panel-feature"><i class="ri-check-line" aria-hidden="true"></i><span>${feature}</span></div>`)
+          .join("");
+        document.querySelectorAll(".mock-bar").forEach((bar) => {
+          bar.style.animation = "none";
+          void bar.offsetHeight;
+          bar.style.animation = "";
+        });
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => selectSystem(tab));
+        tab.addEventListener("keydown", (event) => {
+          if (!["ArrowRight", "ArrowLeft", "ArrowDown", "ArrowUp"].includes(event.key)) return;
+          event.preventDefault();
+          const direction = event.key === "ArrowLeft" || event.key === "ArrowDown" ? 1 : -1;
+          const next = tabs[(index + direction + tabs.length) % tabs.length];
+          next.focus();
+          selectSystem(next);
+        });
       });
 
       document.getElementById("year").textContent = new Date().getFullYear();
